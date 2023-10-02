@@ -30,7 +30,9 @@ export default function Chat() {
     return <div className="absolute w-full h-full m-1 overflow-y-scroll top-0 left-0 flex flex-col">
         <div className="grow w-full">
             <motion.div className="py-6 px-36 flex gap-4 flex-col">
-                {messages.map(message => <ChatBubble author={message.author} text={message.text} />)}
+                {messages.map((message, idx) =>
+                    <ChatBubble key={idx} author={message.author} text={message.text} />
+                )}
             </motion.div>
         </div>
         <div className="w-full">
