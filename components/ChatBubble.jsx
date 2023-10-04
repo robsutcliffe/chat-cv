@@ -1,17 +1,27 @@
 import Gradient from "@components/Gradient";
 import AnimatedText from "@components/AnimatedText";
+import {useContext, useEffect} from "react";
+import { motion, useAnimation } from "framer-motion";
+import {ColourContext} from "@context/colour.conetxt";
+
 export default function ChatBubble({ text, author }) {
+    const { secondaryColours, circleColours } = useContext(ColourContext);
+
+    const controls = useAnimation();
+    useEffect(() => {
+        const borderColor = [...secondaryColours, ...circleColours].find(color => color !== "#061e2a");
+        controls.start({ borderColor });
+    }, [secondaryColours, controls]);
 
     const primary = author === "rob"
-
     const extraBubbleStyle = {
-        rob: "rounded-bl-none left-2 top-2",
-        user: "rounded-br-none left-2 top-2"
+        rob: "rounded-bl-none left-2 top-2 rounded-tl-2xl rounded-br-2xl",
+        user: "rounded-br-none left-2 top-2 rounded-tr-2xl rounded-bl-2xl"
     }[author]
 
     const extraBubbleBackgroundStyle = {
-        rob: "rounded-bl-none bg-opacity-80",
-        user: "text-white rounded-br-none bg-opacity-80"
+        rob: "bg-opacity-80 rounded-tl-xl rounded-br-xl border-0",
+        user: "text-white bg-opacity-50 rounded-tr-xl rounded-bl-xl border "
     }[author]
 
     const extraWrapperStyles = {
@@ -25,16 +35,20 @@ export default function ChatBubble({ text, author }) {
     }[author]
 
     const background = {
-        rob: "#ffffff",
-        user: "#061e2a"
+        rob: "rgba(255,255,255,1)",
+        user: "rgba(6, 30, 42,1)"
     }[author]
 
     return <div className={`flex flex-row w-full ${extraWrapperStyles}`}>
         <div className="relative max-w-4xl">
-            <Gradient primary={primary} style={{filter }} className={`w-full rounded h-full absolute ${extraBubbleStyle}`} />
-            <div style={{ background }} className={`relative rounded z-10 px-6 py-4 max-w-xl text-xl font-ibm ${extraBubbleBackgroundStyle}`}>
+            <Gradient theme={ author === "rob" ? "primary" : "secondary" } clipped style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
+            <motion.div
+                animate={controls}
+                initial={{ borderColor: "#061e2a" }}
+                transition={{ duration: 10 }}
+                style={{ background }}  className={`shadow relative z-10 px-6 py-4 text-lg font-ibm ${extraBubbleBackgroundStyle}`}>
                 {author === "rob" ? <AnimatedText baseText={text} /> : text}
-            </div>
+            </motion.div>
         </div>
     </div>
 

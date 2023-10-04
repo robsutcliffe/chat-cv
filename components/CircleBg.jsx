@@ -31,6 +31,7 @@ function CircleBg({ sizes, ...props}) {
     function windowResized() {
         p5?.resizeCanvas(sizes.width , sizes.height)
         setColCount(Math.round(sizes.width  / radius))
+        addCircles()
     }
 
     useEffect(() => {

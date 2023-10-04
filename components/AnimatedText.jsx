@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function AnimText({ delay=0, baseText }) {
+export default function AnimText({ delay=0, baseText  }) {
     const count = useMotionValue(0);
     const rounded = useTransform(count, (latest) => Math.round(latest));
     const displayText = useTransform(rounded, (latest) =>
@@ -12,8 +12,8 @@ export default function AnimText({ delay=0, baseText }) {
         const controls = animate(count, baseText.length, {
             type: "tween",
             delay: delay,
-            duration: baseText.length * 0.04,
-            ease: "easeInOut",
+            duration: baseText.length * 0.02,
+            ease: "linear",
         });
         return controls.stop;
         // eslint-disable-next-line react-hooks/exhaustive-deps
