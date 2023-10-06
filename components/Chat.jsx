@@ -15,13 +15,20 @@ export default function Chat() {
         setTimeout(() => { setMessages(prev => [...prev, { author, text: "Or choose one of these questions" }]) }, 7000)
     },[])
 
+    useEffect(()=>{
+        console.log({messages})
+    },[messages])
+
     const ask = (standardQuestion) => {
+
+        const text = typeof standardQuestion === "string" ? standardQuestion : question;
+
         setShowFaq(false)
         setMessages(prev => [...prev, {
             author: "user",
-            text: standardQuestion || question
+            text
         }])
-        const params = { question: standardQuestion || question }
+        const params = { question: text }
         axios('/api/askQuestion', { params })
             .then((response) => {
                 const { answer } = response.data;
@@ -29,11 +36,10 @@ export default function Chat() {
             })
         setQuestion("")
     }
-    return <div className="absolute w-full h-full m-1 overflow-y-scroll top-0 left-0 flex flex-col">
+    return <div className="absolute w-full h-full overflow-y-scroll top-0 left-0 flex flex-col">
         <div className="grow w-full">
-            <motion.div className="py-6 px-36 flex gap-5 flex-col">
-                {messages.map((message, idx) =>
-                    <ChatBubble key={idx} author={message.author} text={message.text} />)}
+            <motion.div className="py-32 px-6 md:py-4 lg:py-6 md:px-28 lg:px-36 flex gap-5 flex-col">
+                {messages.map(({ author, text }, idx) => (<ChatBubble key={idx} author={author} text={text} />))}
             </motion.div>
         </div>
         {showFaq && <div className="w-full">

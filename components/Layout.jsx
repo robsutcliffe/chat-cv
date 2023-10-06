@@ -5,7 +5,7 @@ import { ColourContextProvider } from "@context/colour.conetxt";
 
 const Layout = ({ children, home }) => (
     <ColourContextProvider>
-        <div className="relative p-6 h-screen">
+        <div className="relative p-2 md:p-4 lg:p-6 h-screen">
             <Logo />
             <Menu />
             <motion.div

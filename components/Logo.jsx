@@ -15,10 +15,10 @@ export default function Logo() {
                     hover: { left: -10 },
                 }}
                 transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
-                className="fixed top-0 pl-6 left-0 z-30 mt-12 flex h-24 items-center justify-center bg-white text-black"
+                className="fixed top-0 pl-2 md:pl-4 lg:pl-6 left-0 z-30 mt-6 md:mt-8 lg:mt-12 flex h-24 items-center justify-center bg-white text-black"
             >
                 <svg
-                    className="mx-6"
+                    className="mx-2 md:mx-4 lg:mx-6"
                     width="60"
                     height="60"
                     viewBox="0 0 100 100"

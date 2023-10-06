@@ -11,14 +11,20 @@ const HomePage = () => {
     const wrapperRef = useRef(null);
     const [sizes, setSizes] = useState({ width:0, height:0 })
 
-    useEffect(() => {
+    const resize = () => {
         if(wrapperRef.current?.offsetHeight) {
             setSizes({
                 width: wrapperRef.current.offsetWidth,
                 height: wrapperRef.current.offsetHeight
             })
         }
-    }, [wrapperRef])
+    }
+
+    useEffect(() => {
+        addEventListener("resize", resize);
+        return () => removeEventListener("resize", resize);
+    },[])
+    useEffect(resize, [wrapperRef])
 
     return <Layout home="true">
         <div className="w-full min-h-full bg-white overflow-hidden relative" style={{ backgroundColor: "#061E2A" }} ref={wrapperRef}>

@@ -9,7 +9,7 @@ export default function ChatBubble({ text, author }) {
 
     const controls = useAnimation();
     useEffect(() => {
-        const borderColor = [...secondaryColours, ...circleColours].find(color => color !== "#061e2a");
+        const borderColor = [...secondaryColours, ...circleColours.map(c => c.hex)].find(color => color !== "#061e2a");
         controls.start({ borderColor });
     }, [secondaryColours, controls]);
 
@@ -41,7 +41,7 @@ export default function ChatBubble({ text, author }) {
 
     return <div className={`flex flex-row w-full ${extraWrapperStyles}`}>
         <div className="relative max-w-4xl">
-            <Gradient theme={ author === "rob" ? "primary" : "secondary" } clipped style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
+            <Gradient theme={ author === "rob" ? "primary" : "secondary" } style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
             <motion.div
                 animate={controls}
                 initial={{ borderColor: "#061e2a" }}

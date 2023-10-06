@@ -1,144 +1,247 @@
 {
-  "About": {
-    "name": "Rob Sutcliffe",
-    "date of birth": "14th May 1981",
-    "locaiton": "Reading, UK",
-    "email": "rob@firefields.com",
-    "personal summary": "Front-End Developer with expertise in data visualisation, full-stack development, and UI/UX design history. With a proven track record of transforming prototypes into production-ready codebases, delivering responsive data visualisations, and collaborating with cross-functional teams."
+  "About":{
+    "name":"Rob Sutcliffe",
+    "date of birth":"14th May 1981",
+    "locaiton":"Reading, UK",
+    "email":"rob@firefields.com",
+    "twitter":"https://twitter.com/firefields",
+    "github":"https://github.com/robsutcliffe",
+    "observable":"https://observablehq.com/@robsutcliffe?tab=notebooks",
+    "personal summary":"Front-End Developer with expertise in data visualisation, full-stack development, and UI/UX design history. With a proven track record of transforming prototypes into production-ready codebases, delivering responsive data visualisations, and collaborating with cross-functional teams."
   },
-  "Techinical Skills": {
-    "Front End Technologies": ["HTML", "CSS", "Javascript", "React.Js", "Next.Js", "Typescript"],
-    "Back End Technologies": ["Node.JS", "Python", "PostgreSQL", "AWS", "GIT", "PHP"],
-    "Data Visualization": ["D3.JS", "Chart.JS", "Tableau", "R Studio", "Information Design"],
-    "UX/UI": ["System Design", "Wire-framing", "user research"]
+  "This Site":"I built this website using Processing.js, framer Motion.js, Next.js and Tailwind CSS. I made it so people can easily find the details they want to know about me without having to search trhough all my profiles. I like the animated circles.",
+  "Techinical Skills":{
+    "Front End Technologies":[
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React.Js",
+      "Next.Js",
+      "Typescript"
+    ],
+    "Back End Technologies":[
+      "Node.JS",
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "GIT",
+      "PHP"
+    ],
+    "Data Visualization":[
+      "D3.JS",
+      "Chart.JS",
+      "Tableau",
+      "R Studio",
+      "Information Design"
+    ],
+    "UX/UI":[
+      "System Design",
+      "Wire-framing",
+      "user research"
+    ]
   },
-  "Relevant Experience": [
+  "Relevant Experience":[
     {
-      "job title": "Full-stack Developer",
-      "comapany name": "BNP Media",
-      "achievements": [
+      "job title":"Full-stack Developer",
+      "comapany name":"BNP Media",
+      "achievements":[
         "Transformed prototypes into production-ready codebase and converted to TypeScript.",
         "Created responsive data visualisations in D3.Js with animations and filtering.",
         "Designed and developed OpenAI chat integration for dataset analysis."
       ],
-      "start date": "01/01/2023",
-      "end date": "10/01/2023"
-    }, {
-    "job title": "Full-stack Developer",
-    "comapany name": "PepsiCo",
-    "achievements": [
-      "Developed a visual query builder to explore market segments.",
-      "Created interactive data visualisations for target market segment reports.",
-      "Generated professional.pptx reports for marketing team presentations."
-      ],
-    "start date": "07/01/2022",
-    "end date": "12/01/2022"
-
+      "start date":"01/01/2023",
+      "end date":"10/01/2023"
     },
     {
-      "job title": "Front-End Engineer",
-      "comapany name": "Arizona State University",
-      "achievements": [
+      "job title":"Full-stack Developer",
+      "comapany name":"PepsiCo",
+      "achievements":[
+        "Developed a visual query builder to explore market segments.",
+        "Created interactive data visualisations for target market segment reports.",
+        "Generated professional.pptx reports for marketing team presentations."
+      ],
+      "start date":"07/01/2022",
+      "end date":"12/01/2022"
+    },
+    {
+      "job title":"Front-End Engineer",
+      "comapany name":"Arizona State University",
+      "achievements":[
         "Led the development of an LMS and contributed to an internal course authoring tool.",
         "Applied functional programming to sanitise and validate large course data."
       ],
-      "start date": "01/01/2022",
-      "end date": "06/01/2022"
+      "start date":"01/01/2022",
+      "end date":"06/01/2022"
     },
     {
-      "job title": "Data Visualisation Developer",
-      "comapany name": "The Economist Group",
-      "achievements": [
+      "job title":"Data Visualisation Developer",
+      "comapany name":"The Economist Group",
+      "achievements":[
         "Developed an interactive microsite commemorating The Economist's 75th anniversary.",
         "Collaborated closely with an internal strategist to shape and refine the design concept.",
         "Implemented responsive data visualisations and crafted bespoke, adaptable, and lightweight web animations."
       ],
-      "start date": "07/01/2021",
-      "end date": "12/01/2021"
+      "start date":"07/01/2021",
+      "end date":"12/01/2021"
     },
     {
-      "job title": "Tech Lead",
-      "comapany name": "FilmDoo Academy",
-      "achievements": [
+      "job title":"Tech Lead",
+      "comapany name":"FilmDoo Academy",
+      "achievements":[
         "Implemented functional programming for a real-time socket server.",
         "Developed numerous reusable components with lightweight interactions.",
         "Optimised lighthouse score to ensure cross-platform compatibility of the PWA."
       ],
-      "start date": "04/01/2021",
-      "end date": "06/01/2021"
-    }, {
-      "job title": "Principal Application Engineer",
-      "comapany name": "Oracle",
-      "achievements": [
+      "start date":"04/01/2021",
+      "end date":"06/01/2021"
+    },
+    {
+      "job title":"Principal Application Engineer",
+      "comapany name":"Oracle",
+      "achievements":[
         "Developed an observable clickstream to capture user data for AI-driven recommendations.",
         "Implemented a robust unit testing pipeline, creating comprehensive tests and maintaining code coverage above 70%."
       ],
-      "start date": "11/01/2020",
-      "end date": "02/01/2021"
-    }, {
-      "job title": "Professional Services Consultant",
-      "comapany name": "Jive Software",
-      "achievements": [
+      "start date":"11/01/2020",
+      "end date":"02/01/2021"
+    },
+    {
+      "job title":"Professional Services Consultant",
+      "comapany name":"Jive Software",
+      "achievements":[
         "Consulted with high-profile clients to optimise UI customisations for their use cases.",
         "Created customisations, widgets, and themes."
       ],
-      "start date": "05/01/2020",
-      "end date": "10/01/2020"
-    }, {
-      "job title": "Senior Design Manager",
-      "comapany name": "The Chartered Institute of Marketing",
-      "achievements": [
+      "start date":"05/01/2020",
+      "end date":"10/01/2020"
+    },
+    {
+      "job title":"Senior Design Manager",
+      "comapany name":"The Chartered Institute of Marketing",
+      "achievements":[
         "Led the international rebrand, managing the creative and technical team.",
         "Collaborated with C-level executives and a branding agency to ensure visual style alignment.",
         "Developed a comprehensive design system for seamless integration across multiple micro-sites."
       ],
-      "start date": "10/01/2019",
-      "end date": "05/01/2020"
-    }, {
-      "job title": "Front-End Engineer",
-      "comapany name": "Hitachi Data Systems",
-      "achievements": [
+      "start date":"10/01/2019",
+      "end date":"05/01/2020"
+    },
+    {
+      "job title":"Front-End Engineer",
+      "comapany name":"Hitachi Data Systems",
+      "achievements":[
         "Revamped the internal project management software architecture, transitioning it into an efficient MVC framework.",
         "Conducted extensive research and collaborated with multiple teams to completely redesign the user interface."
       ],
-      "start date": "02/01/2019",
-      "end date": "06/01/2019"
-    }, {
-      "job title": "Web Design & Developer",
-      "comapany name": "Various Freelance and Contract Positions",
-      "achievements": [
+      "start date":"02/01/2019",
+      "end date":"06/01/2019"
+    },
+    {
+      "job title":"Web Design & Developer",
+      "comapany name":"Various Freelance and Contract Positions",
+      "achievements":[
         "Managed and delivered multiple concurrent client projects, meeting all deadlines.",
         "Initiated and nurtured client relationships, ensuring client satisfaction and long-term partnerships."
       ],
-      "start date": "01/01/2019",
-      "end date": "02/01/2019"
+      "start date":"01/01/2019",
+      "end date":"02/01/2019"
     }
   ],
-  "Certifications": [
+  "Certifications":[
     {
-      "name": "Information Visualisation Specialisation",
-      "awarding body": "New York University"
+      "name":"Information Visualisation Specialisation",
+      "awarding body":"New York University"
     },
     {
-      "name": "Data Visualisation with R Track",
-      "awarding body": "Datacamp"
+      "name":"Data Visualisation with R Track",
+      "awarding body":"Datacamp"
     },
     {
-      "name": "Data Analyst Associate",
-      "awarding body": "Datacamp"
+      "name":"Data Analyst Associate",
+      "awarding body":"Datacamp"
     },
     {
-      "name": "Competent Communicator",
-      "awarding body": "Toastmasters International"
+      "name":"Competent Communicator",
+      "awarding body":"Toastmasters International"
     },
     {
-      "name": "BA (Hons) Graphic Communication",
-      "awarding body": "University College of Creative Arts"
+      "name":"BA (Hons) Graphic Communication",
+      "awarding body":"University College of Creative Arts"
     }
   ],
-  "Teaching": [
+  "Blog Posts":[
     {
-
+      "Title":"Logical Fallacies In Design Critiques",
+      "url":"https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c",
+      "description":"My most read blog post. I talk about how to apply logical falllacies to design meeting. Especially Appeal to Authority, Ad Hominem and Straw Man fallocies"
+    },
+    {
+      "Title":"Most Design Feedback Should Be Ignored",
+      "url":"https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8",
+      "description":"I wrote this article because I beleive you can't do good dsigns if you take feedback from everyone"
+    },
+    {
+      "Title":"Design Quotes We‘re Still Getting Wrong",
+      "url":"https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53",
+      "description":"Design more than most other careers have people following conventional wisdom. I look at three main design qoutes that people get compleatly wrong. \"Form Ever Follows Function\", \"The Whole is Other Than The Sum of It’s Parts\"  and \"Good Artists Copy, Great Artists Steel\"."
+    }
+  ],
+  "Perosnal Projects":[
+    {
+      "title": "All Along The Watchtower",
+      "description": "Just using WebGl in a grid I created Jimi Hendrix using the lyrics from All Along The Watchtower"
+    },
+    {
+      "title": "Mario Music Composer",
+      "link": "https://observablehq.com/@robsutcliffe/mario-music-composer",
+      "description": "Using pixi.js I recreated the old SNES game"
+    }, {
+      "title": "Donut Economics",
+      "link": "https://observablehq.com/@robsutcliffe/donut-economics",
+      "description": "based on the book with the same name I created donutes of the economic growth of each country using D3.JS"
+    }, {
+      "title": "Balance In The Force",
+      "link": "https://observablehq.com/@robsutcliffe/balance-in-the-force",
+      "description": "using your web can I use webgl to draw your face in real time using still from star wars"
+    }
+  ],
+  "Projects":[
+    {
+      "title":"Economist Intelligence 75th Birthday",
+      "url":"https://www.youtube.com/watch?v=-hYjk9hpWWo",
+      "description":"Created a microsite for The Economist Intelligence 75th anniversary. I worked directly with the designer, strategist, and client to design and develop a unique one-off site. Transitions were created using Framer Motion."
+    },
+    {
+      "title":"Language Learning with Video App",
+      "url":"https://youtu.be/2vUus1VzEyE",
+      "description":"A Strapi and Next.js application with scraping, fuzzy search, and a custom video player. Its features include JWT OAuth, fuzzy search, and a daily cron job to mirror existing databases and images. It allows teachers to find and adapt video clips from foreign language films, add questions, and set them for homework. Teachers can upload and share worksheets that relate to the lessons."
+    },
+    {
+      "title":"Socket.IO Real-time Game",
+      "url":"ttps://youtu.be/c3r1glqMMsU",
+      "description":"Built an application for FilmDoo for students to watch and interact with films in real time and for teachers to control the film and see results at the end. The application heavily uses WebSockets and is animated with Framer Motion."
+    }
+  ],
+  "Teaching":[
+    {
+      "title":"Master Digital Product Design: UX Research & UI Design",
+      "link":"https://www.udemy.com/course/master-digital-product-design-ux-research-ui-design/",
+      "description":"One of Udemy's bestselling courses, covering user research, user testing, design process and critical thinking."
+    },
+    {
+      "title":"UI Design Bootcamp. Master Typography, Colour & Grids",
+      "link":"https://www.udemy.com/course/ui-design-bootcamp-master-typography-colour-grids/",
+      "description":"One of Udemy's top rated design courses, I teach practical skills to improve UI designs by mastering colour, composition and typography"
+    },
+    {
+      "title":"Gamification: Motivation Psychology & The Art of Engagement",
+      "link":"https://www.udemy.com/course/gamification-motivation-psychology-the-art-of-engagement/",
+      "description":"I created this course many years ago but it has been so successful I kept it around, it teaches how to design applicaiton that help engage and motivate."
+    },
+    {
+      "title":"Advanced JavaScript",
+      "url":"https://scrimba.com/playlist/p6WwDCY",
+      "description":"I worked directly with Scrimba as a guest lecturer to create an advanced JavaScript module, teaching ES6 and how to apply it to improve the application's architecture. I wrote the syllabus for the module, created the example application, recorded, and edited it, making alterations as the platform owners requested."
     }
   ]
 }

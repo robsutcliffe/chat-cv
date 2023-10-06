@@ -14,7 +14,7 @@ export default function Question({ ask, question, setQuestion }) {
         animate={{ opacity: 1, scale:1 }}
         transition={{ duration: 0.5, delay: 5 }}
         onSubmit={ask}
-        className="relative flex py-6 px-36">
+        className="relative flex p-6 md:px-28 lg:px-36">
         <label htmlFor="question" className="sr-only">
             Question
         </label>
