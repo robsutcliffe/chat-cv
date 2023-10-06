@@ -33,7 +33,7 @@ export default function AnimText({ delay = 0, baseText, linkWords = [{
                             i === arr.length - 1 ? (
                                 segment
                             ) : (
-                                [segment, <a key={`${linkWord.text}-${idx}-${i}`} className="font-bold" style={{ color: "#126988" }} href={linkWord.link}>{linkWord.text}</a>]
+                                [segment, <a key={`${linkWord.text}-${idx}-${i}`} style={{ color: "#126988" }} href={linkWord.link} target="_blank">{linkWord.text}</a>]
                             )
                         )
                     ) : (
