@@ -15,10 +15,6 @@ export default function Chat() {
         setTimeout(() => { setMessages(prev => [...prev, { author, text: "Or choose one of these questions" }]) }, 7000)
     },[])
 
-    useEffect(()=>{
-        console.log({messages})
-    },[messages])
-
     const ask = (standardQuestion) => {
 
         const text = typeof standardQuestion === "string" ? standardQuestion : question;
@@ -38,7 +34,7 @@ export default function Chat() {
     }
     return <div className="absolute w-full h-full overflow-y-scroll top-0 left-0 flex flex-col">
         <div className="grow w-full">
-            <motion.div className="py-32 px-6 md:py-4 lg:py-6 md:px-28 lg:px-36 flex gap-5 flex-col">
+            <motion.div className="pt-32 pb-4 px-6 md:py-4 lg:py-6 md:px-28 lg:px-36 flex gap-5 flex-col">
                 {messages.map(({ author, text }, idx) => (<ChatBubble key={idx} author={author} text={text} />))}
             </motion.div>
         </div>

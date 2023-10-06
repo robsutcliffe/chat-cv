@@ -189,6 +189,7 @@
   "Perosnal Projects":[
     {
       "title": "All Along The Watchtower",
+      "link": "https://observablehq.com/@robsutcliffe/all-along-the-watchtower",
       "description": "Just using WebGl in a grid I created Jimi Hendrix using the lyrics from All Along The Watchtower"
     },
     {

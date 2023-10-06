@@ -25,8 +25,8 @@ export default function ChatBubble({ text, author }) {
     }[author]
 
     const extraWrapperStyles = {
-        rob: "justify-start",
-        user: "justify-end"
+        rob: "justify-start pr-8",
+        user: "justify-end pl-8"
     }[author]
 
     const filter = {
@@ -40,7 +40,11 @@ export default function ChatBubble({ text, author }) {
     }[author]
 
     return <div className={`flex flex-row w-full ${extraWrapperStyles}`}>
-        <div className="relative max-w-4xl">
+        <motion.div
+            initial={author === "user" ? { opacity:0, left:70 } : { opacity:1, left:0 }}
+            animate={{ opacity:1, left:0 }}
+            transition={{ duration: 0.4 }}
+            className="relative max-w-4xl">
             <Gradient theme={ author === "rob" ? "primary" : "secondary" } style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
             <motion.div
                 animate={controls}
@@ -49,7 +53,7 @@ export default function ChatBubble({ text, author }) {
                 style={{ background }}  className={`shadow relative z-10 px-6 py-4 text-lg font-ibm ${extraBubbleBackgroundStyle}`}>
                 {author === "rob" ? <AnimatedText baseText={text} /> : text}
             </motion.div>
-        </div>
+        </motion.div>
     </div>
 
 }
