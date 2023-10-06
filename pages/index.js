@@ -21,6 +21,11 @@ const HomePage = () => {
     }
 
     useEffect(() => {
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                window.scrollTo(0, 1);
+            }, 0);
+        });
         addEventListener("resize", resize);
         return () => removeEventListener("resize", resize);
     },[])
