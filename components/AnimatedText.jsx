@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
+import linkWords from "../data/linkWords.json";
 import { useEffect, useState, useRef } from "react";
 
-export default function AnimText({ delay = 0, baseText, linkWords = [{
-    text: "Balance In The Force",
-    link: "https://observablehq.com/@robsutcliffe/balance-in-the-force"
-}, {
-    text: "All Along The Watchtower",
-    link: "https://observablehq.com/@robsutcliffe/all-along-the-watchtower"
-}] }) {
+export default function AnimText({ delay = 0, baseText }) {
     const ref = useRef();
     const [displayText, setDisplayText] = useState("");
 
@@ -18,7 +13,7 @@ export default function AnimText({ delay = 0, baseText, linkWords = [{
             } else {
                 clearInterval(timerId);
             }
-        }, 50);
+        }, 30);
 
         return () => clearInterval(timerId);
     }, [baseText, displayText.length]);
@@ -46,9 +41,9 @@ export default function AnimText({ delay = 0, baseText, linkWords = [{
 
         return text.split('.').map((sentence, index, array) => (
             <span key={index}>
-      {insertLinks(sentence)}
+                {insertLinks(sentence)}
                 {index !== array.length - 1 && <>.<br /></>}
-    </span>
+            </span>
         ));
     };
 

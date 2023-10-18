@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 function Question({question}) {
     return <button onClick={question.onClick}  className="shadow-2xl grow overflow-hidden">
-        <Gradient style={{ padding:"0.6px" }} theme="circle">
-            <div className="text-white font-ibmCondensed" style={{ backgroundColor: "rgba(6, 30, 42,1)"}}>
+        <Gradient style={{ padding: 2 }} theme="circle">
+            <div className="text-white font-ibmCondensed" style={{ backgroundColor: "rgba(6, 30, 42,1)" }}>
                 <div className="p-2 md:p-4 lg:p-6 bg-gradient-to-tl text-sm md:text-base hover:to-white/1 hover:from-black/10 to-black/5 from-white/1 flex gap-2 justify-center align-middle">
                 {question.text} <div className="border border-white/30 h-6 w-6 p-0.5 rounded-full flex justify-center align-middle text-2xs md:text-xs">&#63;</div>
                 </div>

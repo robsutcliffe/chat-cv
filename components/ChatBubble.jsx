@@ -41,9 +41,9 @@ export default function ChatBubble({ text, author }) {
 
     return <div className={`flex flex-row w-full ${extraWrapperStyles}`}>
         <motion.div
-            initial={author === "user" ? { opacity:0, left:70 } : { opacity:1, left:0 }}
+            initial={author === "user" ? { opacity:0.3, left:50 } : { opacity:1, left:0 }}
             animate={{ opacity:1, left:0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.3 }}
             className="relative max-w-4xl">
             <Gradient theme={ author === "rob" ? "primary" : "secondary" } style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
             <motion.div
