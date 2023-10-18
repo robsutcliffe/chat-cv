@@ -13,7 +13,7 @@ export default function AnimText({ delay = 0, baseText }) {
             } else {
                 clearInterval(timerId);
             }
-        }, 10);
+        }, 15);
 
         return () => clearInterval(timerId);
     }, [baseText, displayText.length]);
@@ -28,7 +28,7 @@ export default function AnimText({ delay = 0, baseText }) {
                             i === arr.length - 1 ? (
                                 segment
                             ) : (
-                                [segment, <a key={`${linkWord.text}-${idx}-${i}`} style={{ color: "#126988" }} href={linkWord.link} target="_blank">{linkWord.text}</a>]
+                                [segment, <a key={`${linkWord.text}-${idx}-${i}`} style={{ color: "#126988" }} href={linkWord.link} target="_blank">{linkWord.replacement}</a>]
                             )
                         )
                     ) : (
@@ -39,7 +39,7 @@ export default function AnimText({ delay = 0, baseText }) {
             return elements;
         };
 
-        return text.split('.').map((sentence, index, array) => (
+        return text.split(/(?<=[a-zA-Z])\. /).map((sentence, index, array) => (
             <span key={index}>
                 {insertLinks(sentence)}
                 {index !== array.length - 1 && <>.<br /></>}

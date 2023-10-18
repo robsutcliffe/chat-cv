@@ -30,7 +30,7 @@ export default function Logo() {
                         fill="#FFFFFF"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 3.8 }}
+                        transition={{ duration: 0.35, ease: 'easeInOut', delay: 3.8 }}
                     />
                     <motion.path
                         d="M49.7955 80.283L61.0971 68.9815C66.0509 64.0088 66.0697 55.9285 61.0971 50.9559L49.7771 62.2758C44.8233 67.2485 44.8229 75.3292 49.7955 80.283Z"

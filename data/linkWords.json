@@ -1,7 +1,117 @@
 [{
   "text": "Balance In The Force",
+  "replacement": "Balance In The Force",
+  "link": "https://observablehq.com/@robsutcliffe/balance-in-the-force"
+}, {
+  "text": "[here](https://observablehq.com/@robsutcliffe/balance-in-the-force)",
+  "replacement": "here",
   "link": "https://observablehq.com/@robsutcliffe/balance-in-the-force"
 }, {
   "text": "All Along The Watchtower",
+  "replacement": "All Along The Watchtower",
   "link": "https://observablehq.com/@robsutcliffe/all-along-the-watchtower"
+}, {
+  "text": "[here](https://observablehq.com/@robsutcliffe/all-along-the-watchtower)",
+  "replacement": "here",
+  "link": "https://observablehq.com/@robsutcliffe/all-along-the-watchtower"
+}, {
+  "text": "Mario Music Composer",
+  "replacement": "Mario Music Composer",
+  "link": "https://observablehq.com/@robsutcliffe/mario-music-composer"
+}, {
+  "text": "[here](https://observablehq.com/@robsutcliffe/mario-music-composer)",
+  "replacement": "here",
+  "link": "https://observablehq.com/@robsutcliffe/mario-music-composer"
+},{
+  "text": "Donut Economics",
+  "replacement": "Donut Economics",
+  "link": "https://observablehq.com/@robsutcliffe/donut-economics"
+},{
+  "text": "[here](https://observablehq.com/@robsutcliffe/donut-economics)",
+  "replacement": "here",
+  "link": "https://observablehq.com/@robsutcliffe/donut-economics"
+}, {
+  "text": "email at rob@firefields.com",
+  "replacement": "email",
+  "link": "mailto:rob@firefields.com"
+}, {
+  "text": "rob@firefields.com",
+  "replacement": "email",
+  "link": "mailto:rob@firefields.com"
+}, {
+  "text": "Twitter at https://twitter.com/firefields",
+  "replacement": "Twitter",
+  "link": "https://twitter.com/firefields"
+}, {
+  "text": "https://twitter.com/firefields",
+  "replacement": "Twitter",
+  "link": "https://twitter.com/firefields"
+}, {
+  "text": "GitHub at https://github.com/robsutcliffe",
+  "replacement": "Github",
+  "link": "https://github.com/robsutcliffe"
+}, {
+  "text": "https://github.com/robsutcliffe",
+  "replacement": "Github",
+  "link": "https://github.com/robsutcliffe"
+}, {
+  "text": "Observable at https://observablehq.com/@robsutcliffe?tab=notebooks",
+  "replacement": "Observable",
+  "link": "https://observablehq.com/@robsutcliffe?tab=notebooks"
+}, {
+  "text": "https://observablehq.com/@robsutcliffe?tab=notebooks",
+  "replacement": "Observable",
+  "link": "https://observablehq.com/@robsutcliffe?tab=notebooks"
+},
+  {
+    "text": "\"Logical Fallacies In Design Critiques\": [link](https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c)",
+    "replacement": "Logical Fallacies In Design Critiques",
+    "link": "https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c"
+  },
+  {
+    "text": "\"Logical Fallacies In Design Critiques\" (https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c)",
+    "replacement": "Logical Fallacies In Design Critiques",
+    "link": "https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c"
+  }, {
+  "text": "Logical Fallacies In Design Critiques",
+  "replacement": "Logical Fallacies In Design Critiques",
+  "link": "https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c"
+},
+  {
+    "text": "\"Most Design Feedback Should Be Ignored\": [link](https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8)",
+    "replacement": "Most Design Feedback Should Be Ignored",
+    "link": "https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8"
+  },{
+    "text": "\"Most Design Feedback Should Be Ignored\" (https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8)",
+    "replacement": "Most Design Feedback Should Be Ignored",
+    "link": "https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8"
+  }, {
+  "text": "Most Design Feedback Should Be Ignored",
+  "replacement": "Most Design Feedback Should Be Ignored",
+  "link": "https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8"
+},
+  {
+    "text": "\"Design Quotes We're Still Getting Wrong\": [link](https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53)",
+    "replacement": "Design Quotes We‘re Still Getting Wrong",
+    "link": "https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53"
+  },{
+    "text": "\"Design Quotes We‘re Still Getting Wrong\" (https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53)",
+    "replacement": "Design Quotes We‘re Still Getting Wrong",
+    "link": "https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53"
+  }, {
+  "text": "Design Quotes We‘re Still Getting Wrong",
+  "replacement": "Design Quotes We‘re Still Getting Wrong",
+  "link": "https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53"
+}, {
+  "text": "[Video Demo](https://www.youtube.com/watch?v=-hYjk9hpWWo)",
+  "replacement": "Video Demo",
+  "link": "https://www.youtube.com/watch?v=-hYjk9hpWWo"
+}, {
+  "text": "[Video Demo](https://youtu.be/2vUus1VzEyE)",
+  "replacement": "Video Demo",
+  "link": "https://youtu.be/2vUus1VzEyE"
+}, {
+  "text": "[Video Demo](https://youtu.be/c3r1glqMMsU)",
+  "replacement": "Video Demo",
+  "link": "https://youtu.be/c3r1glqMMsU"
 }]
