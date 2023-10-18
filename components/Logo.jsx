@@ -14,7 +14,7 @@ export default function Logo() {
                 variants={{
                     hover: { left: -10 },
                 }}
-                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+                transition={{ duration: 0.3, ease: 'easeOut', delay: 2.6 }}
                 className="fixed top-0 pl-2 md:pl-4 lg:pl-6 left-0 z-30 mt-6 md:mt-8 lg:mt-12 flex h-24 items-center justify-center bg-white text-black"
             >
                 <svg
@@ -30,49 +30,49 @@ export default function Logo() {
                         fill="#FFFFFF"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 2.8 }}
+                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 3.8 }}
                     />
                     <motion.path
                         d="M49.7955 80.283L61.0971 68.9815C66.0509 64.0088 66.0697 55.9285 61.0971 50.9559L49.7771 62.2758C44.8233 67.2485 44.8229 75.3292 49.7955 80.283Z"
                         fill="#FFFFFF"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 3 }}
+                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 4 }}
                     />
                     <motion.path
                         d="M35.1562 65.083L49.811 50.4475C54.7649 45.456 54.7837 37.3749 49.811 32.421L35.1562 47.0758C30.1835 52.0485 30.2024 60.1292 35.1562 65.083Z"
                         fill="#FFFFFF"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 3 }}
+                        transition={{ duration: 0.2, ease: 'easeInOut', delay: 4 }}
                     />
                     <motion.path
                         d="M79.0652 29.4646C84.4522 34.8705 88.3326 41.7456 90.0466 49.2046C92.3069 58.9427 90.9129 69.4535 86.0532 78.3063C80.2894 88.7979 69.7603 96.5577 57.8748 98.8557C47.3267 100.89 36.0443 98.686 27.0219 92.5832C24.8558 91.1328 22.84 89.4566 20.9941 87.6296C20.9752 87.5919 20.9379 87.5546 20.9002 87.5357C14.8163 81.4141 10.7466 73.39 9.40926 64.895C7.43149 52.2184 11.6335 38.77 20.9573 29.4462L50.0204 0.382137L79.0836 29.4462L79.0652 29.4646Z"
                         stroke="#FFFFFF"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: 1.5, ease: 'easeInOut', delay: 1.1 }}
+                        transition={{ duration: 0.4, ease: 'easeInOut', delay: 3.1 }}
                     />
                     <motion.path
                         d="M70.0779 38.4485L50.0188 18.3692L29.9211 38.4669C25.0426 43.3454 22.048 50.0323 21.6712 56.9827C21.2568 64.8373 24.2317 72.7858 29.8071 78.4554C29.8636 78.5119 29.9198 78.5686 29.9763 78.6063C35.5329 84.144 43.4823 87.2338 51.3745 86.8571C60.7924 86.405 69.8343 80.9986 74.6563 72.6354C79.0074 65.0446 79.5349 55.4192 76.1444 47.414C74.7317 44.08 72.6401 41.0286 70.0595 38.4669L70.0779 38.4485Z"
                         stroke="#FFFFFF"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: 1, ease: 'easeInOut', delay: 1.5 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut', delay: 3.5 }}
                     />
                     <motion.path
                         d="M49.7955 80.283L61.0971 68.9815C66.0509 64.0088 66.0697 55.9285 61.0971 50.9559L49.7771 62.2758C44.8233 67.2485 44.8229 75.3292 49.7955 80.283Z"
                         stroke="#FFFFFF"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: 1, ease: 'easeInOut', delay: 1.5 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut', delay: 3.5 }}
                     />
                     <motion.path
                         d="M35.1562 65.083L49.811 50.4475C54.7649 45.456 54.7837 37.3749 49.811 32.421L35.1562 47.0758C30.1835 52.0485 30.2024 60.1292 35.1562 65.083Z"
                         stroke="#FFFFFF"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: 1, ease: 'easeInOut', delay: 1.5 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut', delay: 3.5 }}
                     />
                 </svg>
             </motion.div>

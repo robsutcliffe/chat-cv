@@ -13,7 +13,7 @@ export default function AnimText({ delay = 0, baseText }) {
             } else {
                 clearInterval(timerId);
             }
-        }, 30);
+        }, 10);
 
         return () => clearInterval(timerId);
     }, [baseText, displayText.length]);

@@ -10,9 +10,9 @@ export default function Chat() {
     const [showFaq, setShowFaq] = useState(true);
     useEffect(()=>{
         const author = "rob"
-        setTimeout(() => { setMessages(prev => [...prev, { author, text: "Hi, I'm Rob!" }]) }, 3600)
-        setTimeout(() => { setMessages(prev => [...prev, { author, text: "Please ask me any questions below." }]) }, 5000)
-        setTimeout(() => { setMessages(prev => [...prev, { author, text: "Or choose one of these questions" }]) }, 7000)
+        setTimeout(() => { setMessages(prev => [...prev, { author, text: "Hi, I'm Rob!" }]) }, 600)
+        setTimeout(() => { setMessages(prev => [...prev, { author, text: "Please ask me any questions below." }]) }, 1000)
+        setTimeout(() => { setMessages(prev => [...prev, { author, text: "Or choose one of these questions" }]) }, 1700)
     },[])
 
     const ask = (standardQuestion) => {

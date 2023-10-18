@@ -12,14 +12,14 @@ export default function Question({ ask, question, setQuestion }) {
     return <motion.form
         initial={{ opacity: 0, scale:0.9 }}
         animate={{ opacity: 1, scale:1 }}
-        transition={{ duration: 0.5, delay: 5 }}
+        transition={{ duration: 0.5, delay: 1 }}
         onSubmit={ask}
-        className="relative flex p-6 md:px-28 lg:px-36">
+        className="relative flex pb-6 pt-4 md:px-28 lg:px-36">
         <label htmlFor="question" className="sr-only">
             Question
         </label>
-        <div className="relative overflow-hidden flex-auto min-w-0 rounded-tl-xl bg-white">
-            <Gradient theme="secondary" className="absolute pointer-events-none w-full h-full rounded-tl-xl opacity-50">
+        <div className="relative overflow-hidden flex-auto min-w-0 rounded-l bg-white">
+            <Gradient theme="secondary" className="absolute pointer-events-none w-full h-full rounded-l opacity-50">
                 <div style={{filter: "blur(3px)" }}  className="m-1 bg-white w-full h-full"></div>
             </Gradient>
             <input
@@ -33,11 +33,11 @@ export default function Question({ ask, question, setQuestion }) {
                 placeholder="Ask your question..."
             />
         </div>
-        <Gradient theme="primary" className="rounded-br-xl">
+        <Gradient theme="primary" className="rounded-r">
             <button
                 type="submit"
                 onClick={ask}
-                className="flex-none border-l border-t border-white/20 bg-gradient-to-tl hover:to-white/5 hover:from-black/10 to-black/5 from-white/10 rounded-br-xl px-12 py-4 text-sm text-white font-ibmCondensed"
+                className="flex-none border-l border-t border-white/20 bg-gradient-to-tl hover:to-white/5 hover:from-black/10 to-black/5 from-white/10 rounded-r px-12 py-4 text-sm text-white font-ibmCondensed"
             >
                 ASK
             </button>
