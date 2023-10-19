@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import Writing from "@components/Writing";
 import {ColourContext} from "@context/colour.conetxt";
 
-export default function ChatBubble({ text, author }) {
+export default function ChatBubble({ text, author, checkScrollPosition }) {
     const { secondaryColours, circleColours } = useContext(ColourContext);
 
     const controls = useAnimation();
@@ -42,6 +42,8 @@ export default function ChatBubble({ text, author }) {
         user: "rgba(6, 30, 42,1)"
     }[author]
 
+    const textElement = isWaiting ? <Writing /> : isRob ? <AnimatedText baseText={text} checkScrollPosition={checkScrollPosition} /> : text
+
     return <div className={`flex flex-row w-full ${extraWrapperStyles}`}>
         <motion.div
             initial={isRob ? { opacity:0, left:-20 } : { opacity:0.3, left:50 }}
@@ -54,7 +56,7 @@ export default function ChatBubble({ text, author }) {
                 initial={{ borderColor: "#061e2a" }}
                 transition={{ duration: 10 }}
                 style={{ background }}  className={`shadow relative z-10 px-6 py-4 text-lg font-ibm ${extraBubbleBackgroundStyle}`}>
-                {isWaiting ? <Writing /> : isRob ? <AnimatedText baseText={text} /> : text}
+                {textElement}
             </motion.div>
         </motion.div>
     </div>

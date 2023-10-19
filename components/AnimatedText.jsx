@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import linkWords from "../data/linkWords.json";
 import { useEffect, useState, useRef } from "react";
 
-export default function AnimText({ delay = 0, baseText }) {
+export default function AnimText({ delay = 0, baseText, checkScrollPosition }) {
     const ref = useRef();
     const [displayText, setDisplayText] = useState("");
 
@@ -47,6 +47,7 @@ export default function AnimText({ delay = 0, baseText }) {
         ));
     };
 
+    useEffect(checkScrollPosition, [processText])
 
     return <motion.span ref={ref}>{processText(displayText)}</motion.span>;
 }
