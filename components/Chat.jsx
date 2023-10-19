@@ -8,6 +8,7 @@ export default function Chat() {
     const [question, setQuestion] = useState("");
     const [messages, setMessages] = useState([])
     const [showFaq, setShowFaq] = useState(true);
+
     useEffect(()=>{
         const author = "rob"
         setTimeout(() => { setMessages(prev => [...prev, { author, text: "Hi, I'm Rob!" }]) }, 600)
@@ -23,12 +24,18 @@ export default function Chat() {
         setMessages(prev => [...prev, {
             author: "user",
             text
+        },{
+            author: "rob",
+            text: "--waiting--"
         }])
         const params = { question: text }
         axios('/api/askQuestion', { params })
             .then((response) => {
                 const { answer } = response.data;
-                setMessages(prev => [...prev, { author: "rob", text: answer }])
+                setMessages(prev => [
+                    ...prev.slice(0, prev.length - 1),
+                    { ...prev[prev.length - 1], text: answer }
+                ])
             })
         setQuestion("")
     }

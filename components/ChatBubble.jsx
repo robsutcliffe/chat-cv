@@ -2,6 +2,7 @@ import Gradient from "@components/Gradient";
 import AnimatedText from "@components/AnimatedText";
 import {useContext, useEffect} from "react";
 import { motion, useAnimation } from "framer-motion";
+import Writing from "@components/Writing";
 import {ColourContext} from "@context/colour.conetxt";
 
 export default function ChatBubble({ text, author }) {
@@ -13,7 +14,9 @@ export default function ChatBubble({ text, author }) {
         controls.start({ borderColor });
     }, [secondaryColours, controls]);
 
-    const primary = author === "rob"
+    const isRob = author === "rob"
+    const isWaiting = text === "--waiting--";
+
     const extraBubbleStyle = {
         rob: "rounded-bl-none left-2 top-2 rounded-tl-2xl rounded-br-2xl",
         user: "rounded-br-none left-2 top-2 rounded-tr-2xl rounded-bl-2xl"
@@ -41,17 +44,17 @@ export default function ChatBubble({ text, author }) {
 
     return <div className={`flex flex-row w-full ${extraWrapperStyles}`}>
         <motion.div
-            initial={author === "user" ? { opacity:0.3, left:50 } : { opacity:1, left:0 }}
+            initial={isRob ? { opacity:0, left:-20 } : { opacity:0.3, left:50 }}
             animate={{ opacity:1, left:0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, delay: isWaiting ? 1 : 0 }}
             className="relative max-w-4xl">
-            <Gradient theme={ author === "rob" ? "primary" : "secondary" } style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
+            <Gradient theme={ isRob ? "primary" : "secondary" } style={{filter}} className={`w-full h-full absolute ${extraBubbleStyle}`} />
             <motion.div
                 animate={controls}
                 initial={{ borderColor: "#061e2a" }}
                 transition={{ duration: 10 }}
                 style={{ background }}  className={`shadow relative z-10 px-6 py-4 text-lg font-ibm ${extraBubbleBackgroundStyle}`}>
-                {author === "rob" ? <AnimatedText baseText={text} /> : text}
+                {isWaiting ? <Writing /> : isRob ? <AnimatedText baseText={text} /> : text}
             </motion.div>
         </motion.div>
     </div>
