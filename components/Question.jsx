@@ -9,12 +9,13 @@ export default function Question({ ask, question, setQuestion }) {
         inputRef.current.focus();
     }, []);
 
+
     return <motion.form
         initial={{ opacity: 0, scale:0.9 }}
         animate={{ opacity: 1, scale:1 }}
         transition={{ duration: 0.5, delay: 1 }}
         onSubmit={ask}
-        className="relative flex pb-6 pt-4 md:px-28 lg:px-36">
+        className="relative flex pb-6 pt-4 px-6 md:px-28 lg:px-36">
         <label htmlFor="question" className="sr-only">
             Question
         </label>

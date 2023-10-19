@@ -35,7 +35,7 @@ export default function Faq({ ask }) {
         initial={{ opacity: 0, scale:0.95 }}
         animate={{ opacity: 1, scale:1 }}
         transition={{ duration: 0.4, delay: 1.7 }}
-        className="px-6 md:px-28 lg:px-36 flex gap-1 lg:gap-5 flex-col lg:flex-row">
+        className="px-6 md:px-28 lg:px-36 flex gap-2 lg:gap-5 flex-col lg:flex-row">
             {questions.map((question, idx) => <Question question={question} key={idx} />)}
     </motion.div>
 }

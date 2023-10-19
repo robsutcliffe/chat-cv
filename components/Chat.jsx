@@ -61,8 +61,8 @@ export default function Chat() {
     }
     return <div onScroll={checkScrollPosition} ref={containerRef} className="absolute w-full h-full overflow-y-scroll top-0 left-0 flex flex-col">
         <div className="m-2 md:m-4 lg:m-6 z-20 fixed top-0 left-0 bottom-0 right-0 pointer-events-none">
-            <motion.div animate={{ opacity: isScrolledTop ? 0 : 0.7 }} className="bg-gradient-to-b from-black h-8 absolute top-0 left-0 right-0"/>
-            <motion.div animate={{ opacity: isScrolledBottom ? 0 : 0.7 }} className="bg-gradient-to-t from-black h-8 absolute bottom-0 left-0 right-0"/>
+            <motion.div animate={{ opacity: isScrolledTop ? 0 : 0.8 }} className="bg-gradient-to-b from-black h-8 absolute top-0 left-0 right-0"/>
+            <motion.div animate={{ opacity: isScrolledBottom ? 0 : 0.8 }} className="bg-gradient-to-t from-black h-8 absolute bottom-0 left-0 right-0"/>
         </div>
         <div className="grow w-full">
             <motion.div className="pt-32 pb-4 px-6 md:py-4 lg:py-6 md:px-28 lg:px-36 flex gap-5 flex-col">
