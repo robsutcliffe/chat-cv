@@ -12,13 +12,17 @@ const HomePage = () => {
     const [sizes, setSizes] = useState({ width:0, height:0 })
 
     const resize = () => {
-        if(wrapperRef.current?.offsetHeight) {
+        setSizes({ width:0, height:0 })
+    }
+
+    useEffect(()=>{
+        if(wrapperRef.current?.offsetHeight && !sizes.height) {
             setSizes({
                 width: wrapperRef.current.offsetWidth,
                 height: wrapperRef.current.offsetHeight
             })
         }
-    }
+    },[sizes])
 
     useEffect(() => {
         window.addEventListener("load", () => {

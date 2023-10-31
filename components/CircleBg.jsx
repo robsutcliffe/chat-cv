@@ -28,6 +28,12 @@ function CircleBg({ sizes, ...props}) {
         }
     }, [updating])
 
+    useEffect(()=>{
+        if(sizes.height) {
+            setUpdating(true)
+        }
+    },[sizes])
+
     function windowResized() {
         p5?.resizeCanvas(sizes.width , sizes.height)
         setColCount(Math.round(sizes.width  / radius))
