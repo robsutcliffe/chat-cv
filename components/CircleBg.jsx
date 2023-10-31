@@ -30,7 +30,9 @@ function CircleBg({ sizes, ...props}) {
 
     useEffect(()=>{
         if(sizes.height) {
-            setUpdating(true)
+            p5?.resizeCanvas(sizes.width , sizes.height)
+            setColCount(Math.round(sizes.width  / radius))
+            addCircles()
         }
     },[sizes])
 
