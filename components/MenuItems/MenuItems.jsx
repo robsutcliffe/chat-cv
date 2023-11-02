@@ -73,7 +73,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
         }}
       >
         {skills.map((skill) => (
-          <span className="inline-flex items-center rounded-md bg-gray-400/10 px-2 mr-1 mb-1 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
+          <span key={skill} className="inline-flex items-center rounded-md bg-gray-400/10 px-2 mr-1 mb-1 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
             {skill}
           </span>
         ))}
