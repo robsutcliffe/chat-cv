@@ -1,0 +1,252 @@
+[{
+  "type": "about",
+  "name":"Rob Sutcliffe",
+  "date_of_birth":"14th May 1981",
+  "location":"Reading, UK",
+  "email":"rob@firefields.com",
+  "twitter":"https://twitter.com/firefields",
+  "github":"https://github.com/robsutcliffe",
+  "observable":"https://observablehq.com/@robsutcliffe?tab=notebooks",
+  "personal_summary":"Front-End Developer with expertise in data visualisation, full-stack development, and UI/UX design history. With a proven track record of transforming prototypes into production-ready codebases, delivering responsive data visualisations, and collaborating with cross-functional teams.",
+  "this_site":"I built this website using Processing.js, framer Motion.js, Next.js and Tailwind CSS. I made it so people can easily find the details they want to know about me without having to search trhough all my profiles. I like the animated circles.",
+  "technical_skills": {
+    "front_end_technologies":[
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React.Js",
+      "Next.Js",
+      "Typescript"
+    ],
+    "back_end_technologies":[
+      "Node.JS",
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "GIT",
+      "PHP"
+    ],
+    "data_visualization":[
+      "D3.JS",
+      "Chart.JS",
+      "Tableau",
+      "R Studio",
+      "Information Design"
+    ],
+    "ui_ux":[
+      "System Design",
+      "Wire-framing",
+      "user research"
+    ]
+  }
+},{
+  "type": "experience",
+  "title":"Full-stack Developer",
+  "company":"BNP Media",
+  "achievements":[
+    "Transformed prototypes into production-ready codebase and converted to TypeScript.",
+    "Created responsive data visualisations in D3.JS with animations and filtering.",
+    "Designed and developed OpenAI chat integration for dataset analysis."
+  ],
+  "start":"01/01/2023",
+  "end":"01/10/2023"
+}, {
+  "type": "experience",
+  "title": "Full-stack Developer",
+  "company": "PepsiCo",
+  "achievements":[
+    "Developed a visual query builder to explore market segments.",
+    "Created interactive data visualisations for target market segment reports.",
+    "Generated professional.pptx reports for marketing team presentations."
+  ],
+  "start":"01/07/2022",
+  "end":"01/12/2022"
+},{
+  "type": "experience",
+  "title":"Front-End Engineer",
+  "company":"Arizona State University",
+  "achievements":[
+    "Led the development of an LMS and contributed to an internal course authoring tool.",
+    "Applied functional programming to sanitise and validate large course data."
+  ],
+  "start":"01/01/2022",
+  "end":"01/06/2022"
+},{
+  "type": "experience",
+  "title":"Data Visualisation Developer",
+  "company":"The Economist Group",
+  "achievements":[
+    "Developed an interactive microsite commemorating The Economist's 75th anniversary.",
+    "Collaborated closely with an internal strategist to shape and refine the design concept.",
+    "Implemented responsive data visualisations and crafted bespoke, adaptable, and lightweight web animations."
+  ],
+  "start":"01/07/2021",
+  "end":"01/12/2021"
+},{
+  "type": "experience",
+  "title":"Tech Lead",
+  "company":"FilmDoo Academy",
+  "achievements":[
+    "Implemented functional programming for a real-time socket server.",
+    "Developed numerous reusable components with lightweight interactions.",
+    "Optimised lighthouse score to ensure cross-platform compatibility of the PWA."
+  ],
+  "start":"01/04/2021",
+  "end":"01/06/2021"
+},{
+  "type": "experience",
+  "title":"Principal Application Engineer",
+  "company":"Oracle",
+  "achievements":[
+    "Developed an observable clickstream to capture user data for AI-driven recommendations.",
+    "Implemented a robust unit testing pipeline, creating comprehensive tests and maintaining code coverage above 70%."
+  ],
+  "start":"01/11/2020",
+  "end":"01/02/2021"
+},{
+  "type": "experience",
+  "title":"Professional Services Consultant",
+  "company":"Jive Software",
+  "achievements":[
+    "Consulted with high-profile clients to optimise UI customisations for their use cases.",
+    "Created customisations, widgets, and themes."
+  ],
+  "start":"01/05/2020",
+  "end":"01/10/2020"
+},{
+  "type": "experience",
+  "title":"Senior Design Manager",
+  "company":"The Chartered Institute of Marketing",
+  "achievements":[
+    "Led the international rebrand, managing the creative and technical team.",
+    "Collaborated with C-level executives and a branding agency to ensure visual style alignment.",
+    "Developed a comprehensive design system for seamless integration across multiple micro-sites."
+  ],
+  "start":"01/10/2019",
+  "end":"01/05/2020"
+},{
+  "type": "experience",
+  "title":"Front-End Engineer",
+  "company":"Hitachi Data Systems",
+  "achievements":[
+    "Revamped the internal project management software architecture, transitioning it into an efficient MVC framework.",
+    "Conducted extensive research and collaborated with multiple teams to completely redesign the user interface."
+  ],
+  "start":"01/02/2019",
+  "end":"01/06/2019"
+}, {
+  "type": "experience",
+  "title":"Web Design & Developer",
+  "company":"Various Freelance and Contract Positions",
+  "achievements":[
+    "Managed and delivered multiple concurrent client projects, meeting all deadlines.",
+    "Initiated and nurtured client relationships, ensuring client satisfaction and long-term partnerships."
+  ],
+  "start":"01/01/2000",
+  "end":"01/01/2019"
+}, {
+  "type": "certification",
+  "title":"Information Visualisation Specialisation",
+  "from":"New York University"
+},
+{
+  "type": "certification",
+  "title":"Data Visualisation with R Track",
+  "from":"Datacamp"
+},
+{
+  "type": "certification",
+  "title":"Data Analyst Associate",
+  "from":"Datacamp"
+},
+{
+  "type": "certification",
+  "title":"Competent Communicator",
+  "from":"Toastmasters International"
+},
+{
+  "type": "certification",
+  "title":"BA (Hons) Graphic Communication",
+  "from":"University College of Creative Arts"
+},
+{
+  "type": "blog",
+  "title":"Logical Fallacies In Design Critiques",
+  "url":"https://medium.com/prototypr/logical-fallacies-in-design-critiques-f5efe66771c",
+  "description":"My most read blog post. I talk about how to apply logical falllacies to design meeting. Especially Appeal to Authority, Ad Hominem and Straw Man fallocies"
+},
+{
+  "type": "blog",
+  "title":"Most Design Feedback Should Be Ignored",
+  "url":"https://medium.com/prototypr/most-design-feedback-should-be-ignored-5725d1b98ad8",
+  "description":"I wrote this article because I beleive you can't do good dsigns if you take feedback from everyone"
+},
+{
+  "type": "blog",
+  "title":"Design Quotes We‘re Still Getting Wrong",
+  "url":"https://medium.com/prototypr/design-quotes-we-re-still-getting-wrong-7ac47dd79d53",
+  "description":"Design more than most other careers have people following conventional wisdom. I look at three main design qoutes that people get compleatly wrong. \"Form Ever Follows Function\", \"The Whole is Other Than The Sum of It’s Parts\"  and \"Good Artists Copy, Great Artists Steel\"."
+},
+{
+  "type": "project",
+  "title": "All Along The Watchtower",
+  "url": "https://observablehq.com/@robsutcliffe/all-along-the-watchtower",
+  "description": "Just using WebGl in a grid I created Jimi Hendrix using the lyrics from All Along The Watchtower"
+},
+{
+  "type": "project",
+  "title": "Mario Music Composer",
+  "url": "https://observablehq.com/@robsutcliffe/mario-music-composer",
+  "description": "Using pixi.js I recreated the old SNES game"
+}, {
+  "type": "project",
+  "title": "Donut Economics",
+  "url": "https://observablehq.com/@robsutcliffe/donut-economics",
+  "description": "based on the book with the same name I created donutes of the economic growth of each country using D3.JS"
+}, {
+  "type": "project",
+  "title": "Balance In The Force",
+  "url": "https://observablehq.com/@robsutcliffe/balance-in-the-force",
+  "description": "using your web can I use webgl to draw your face in real time using still from star wars"
+}, {
+  "type": "video",
+  "title":"Economist Intelligence 75th Birthday",
+  "url":"https://www.youtube.com/watch?v=-hYjk9hpWWo",
+  "description":"Created a microsite for The Economist Intelligence 75th anniversary. I worked directly with the designer, strategist, and client to design and develop a unique one-off site. Transitions were created using Framer Motion."
+},
+{
+  "type": "video",
+  "title":"Language Learning with Video App",
+  "url":"https://youtu.be/2vUus1VzEyE",
+  "description":"A Strapi and Next.js application with scraping, fuzzy search, and a custom video player. Its features include JWT OAuth, fuzzy search, and a daily cron job to mirror existing databases and images. It allows teachers to find and adapt video clips from foreign language films, add questions, and set them for homework. Teachers can upload and share worksheets that relate to the lessons."
+},
+{
+  "type": "video",
+  "title":"Socket.IO Real-time Game",
+  "url":"ttps://youtu.be/c3r1glqMMsU",
+  "description":"Built an application for FilmDoo for students to watch and interact with films in real time and for teachers to control the film and see results at the end. The application heavily uses WebSockets and is animated with Framer Motion."
+},
+{
+  "type": "course",
+  "title":"Master Digital Product Design: UX Research & UI Design",
+  "url":"https://www.udemy.com/course/master-digital-product-design-ux-research-ui-design/",
+  "description":"One of Udemy's bestselling courses, covering user research, user testing, design process and critical thinking."
+},
+{
+  "type": "course",
+  "title":"UI Design Bootcamp. Master Typography, Colour & Grids",
+  "url":"https://www.udemy.com/course/ui-design-bootcamp-master-typography-colour-grids/",
+  "description":"One of Udemy's top rated design courses, I teach practical skills to improve UI designs by mastering colour, composition and typography"
+},
+{
+  "type": "course",
+  "title":"Gamification: Motivation Psychology & The Art of Engagement",
+  "url":"https://www.udemy.com/course/gamification-motivation-psychology-the-art-of-engagement/",
+  "description":"I created this course many years ago but it has been so successful I kept it around, it teaches how to design applicaiton that help engage and motivate."
+},
+{
+  "type": "course",
+  "title":"Advanced JavaScript",
+  "url":"https://scrimba.com/playlist/p6WwDCY",
+  "description":"I worked directly with Scrimba as a guest lecturer to create an advanced JavaScript module, teaching ES6 and how to apply it to improve the application's architecture. I wrote the syllabus for the module, created the example application, recorded, and edited it, making alterations as the platform owners requested."
+}]

@@ -43,108 +43,108 @@
   "Relevant Experience":[
     {
       "job title":"Full-stack Developer",
-      "comapany name":"BNP Media",
+      "company name":"BNP Media",
       "achievements":[
         "Transformed prototypes into production-ready codebase and converted to TypeScript.",
-        "Created responsive data visualisations in D3.Js with animations and filtering.",
+        "Created responsive data visualisations in D3.JS with animations and filtering.",
         "Designed and developed OpenAI chat integration for dataset analysis."
       ],
       "start date":"01/01/2023",
-      "end date":"10/01/2023"
+      "end date":"01/10/2023"
     },
     {
       "job title":"Full-stack Developer",
-      "comapany name":"PepsiCo",
+      "company name":"PepsiCo",
       "achievements":[
         "Developed a visual query builder to explore market segments.",
         "Created interactive data visualisations for target market segment reports.",
         "Generated professional.pptx reports for marketing team presentations."
       ],
-      "start date":"07/01/2022",
-      "end date":"12/01/2022"
+      "start date":"01/07/2022",
+      "end date":"01/12/2022"
     },
     {
       "job title":"Front-End Engineer",
-      "comapany name":"Arizona State University",
+      "company name":"Arizona State University",
       "achievements":[
         "Led the development of an LMS and contributed to an internal course authoring tool.",
         "Applied functional programming to sanitise and validate large course data."
       ],
       "start date":"01/01/2022",
-      "end date":"06/01/2022"
+      "end date":"01/06/2022"
     },
     {
       "job title":"Data Visualisation Developer",
-      "comapany name":"The Economist Group",
+      "company name":"The Economist Group",
       "achievements":[
         "Developed an interactive microsite commemorating The Economist's 75th anniversary.",
         "Collaborated closely with an internal strategist to shape and refine the design concept.",
         "Implemented responsive data visualisations and crafted bespoke, adaptable, and lightweight web animations."
       ],
-      "start date":"07/01/2021",
-      "end date":"12/01/2021"
+      "start date":"01/07/2021",
+      "end date":"01/12/2021"
     },
     {
       "job title":"Tech Lead",
-      "comapany name":"FilmDoo Academy",
+      "company name":"FilmDoo Academy",
       "achievements":[
         "Implemented functional programming for a real-time socket server.",
         "Developed numerous reusable components with lightweight interactions.",
         "Optimised lighthouse score to ensure cross-platform compatibility of the PWA."
       ],
-      "start date":"04/01/2021",
-      "end date":"06/01/2021"
+      "start date":"01/04/2021",
+      "end date":"01/06/2021"
     },
     {
       "job title":"Principal Application Engineer",
-      "comapany name":"Oracle",
+      "company name":"Oracle",
       "achievements":[
         "Developed an observable clickstream to capture user data for AI-driven recommendations.",
         "Implemented a robust unit testing pipeline, creating comprehensive tests and maintaining code coverage above 70%."
       ],
-      "start date":"11/01/2020",
-      "end date":"02/01/2021"
+      "start date":"01/11/2020",
+      "end date":"01/02/2021"
     },
     {
       "job title":"Professional Services Consultant",
-      "comapany name":"Jive Software",
+      "company name":"Jive Software",
       "achievements":[
         "Consulted with high-profile clients to optimise UI customisations for their use cases.",
         "Created customisations, widgets, and themes."
       ],
-      "start date":"05/01/2020",
-      "end date":"10/01/2020"
+      "start date":"01/05/2020",
+      "end date":"01/10/2020"
     },
     {
       "job title":"Senior Design Manager",
-      "comapany name":"The Chartered Institute of Marketing",
+      "company name":"The Chartered Institute of Marketing",
       "achievements":[
         "Led the international rebrand, managing the creative and technical team.",
         "Collaborated with C-level executives and a branding agency to ensure visual style alignment.",
         "Developed a comprehensive design system for seamless integration across multiple micro-sites."
       ],
-      "start date":"10/01/2019",
-      "end date":"05/01/2020"
+      "start date":"01/10/2019",
+      "end date":"01/05/2020"
     },
     {
       "job title":"Front-End Engineer",
-      "comapany name":"Hitachi Data Systems",
+      "company name":"Hitachi Data Systems",
       "achievements":[
         "Revamped the internal project management software architecture, transitioning it into an efficient MVC framework.",
         "Conducted extensive research and collaborated with multiple teams to completely redesign the user interface."
       ],
-      "start date":"02/01/2019",
-      "end date":"06/01/2019"
+      "start date":"01/02/2019",
+      "end date":"01/06/2019"
     },
     {
       "job title":"Web Design & Developer",
-      "comapany name":"Various Freelance and Contract Positions",
+      "company name":"Various Freelance and Contract Positions",
       "achievements":[
         "Managed and delivered multiple concurrent client projects, meeting all deadlines.",
         "Initiated and nurtured client relationships, ensuring client satisfaction and long-term partnerships."
       ],
-      "start date":"01/01/2019",
-      "end date":"02/01/2019"
+      "start date":"01/01/2000",
+      "end date":"01/01/2019"
     }
   ],
   "Certifications":[
@@ -241,7 +241,7 @@
     },
     {
       "title":"Advanced JavaScript",
-      "url":"https://scrimba.com/playlist/p6WwDCY",
+      "link":"https://scrimba.com/playlist/p6WwDCY",
       "description":"I worked directly with Scrimba as a guest lecturer to create an advanced JavaScript module, teaching ES6 and how to apply it to improve the application's architecture. I wrote the syllabus for the module, created the example application, recorded, and edited it, making alterations as the platform owners requested."
     }
   ]
