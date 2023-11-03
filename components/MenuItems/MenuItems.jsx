@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Expertise from "@components/MenuItems/Expertise";
 import cv from "@data/cv.json";
 import { SearchContext } from "@context/search.context";
@@ -24,6 +24,38 @@ function Heading({ extraDelay, open, text, borderControls, textControl }) {
         </motion.p>
       </motion.div>
     </motion.div>
+  );
+}
+
+function Section({ borderControls, textControl, delay, items, open, text }) {
+  return (
+    <>
+      <motion.div animate={{ opacity: items.length ? 1 : 0.5 }}>
+        <Heading
+          text={text}
+          extraDelay={delay}
+          open={open}
+          borderControls={borderControls}
+          textControl={textControl}
+        />
+      </motion.div>
+      {items.map((course, idx) => (
+        <motion.div
+          animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
+          transition={{
+            delay: open ? delay + idx * 0.1 : 0,
+            ease: "easeOut",
+          }}
+          key={idx}
+          className="my-3 max-w-3xl text-white font-ibm"
+        >
+          <a href={course.url} target="_blank">
+            <b>{course.title}</b>
+            <p className="text-gray-400">{course.description}</p>
+          </a>
+        </motion.div>
+      ))}
+    </>
   );
 }
 
@@ -73,7 +105,10 @@ export default function MenuItems({ borderControls, textControl, open }) {
         }}
       >
         {skills.map((skill) => (
-          <span key={skill} className="inline-flex items-center rounded-md bg-gray-400/10 px-2 mr-1 mb-1 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20">
+          <span
+            key={skill}
+            className="inline-flex items-center rounded-md bg-gray-400/10 px-2 mr-1 mb-1 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20"
+          >
             {skill}
           </span>
         ))}
@@ -123,32 +158,36 @@ export default function MenuItems({ borderControls, textControl, open }) {
           Email
         </motion.a>
       </motion.div>
-      <Heading
-        text="Work Experience"
-        extraDelay={experienceDelay}
-        open={open}
-        borderControls={borderControls}
-        textControl={textControl}
-      />
+      <motion.div animate={{ opacity: experiences.length ? 1 : 0.5 }}>
+        <Heading
+          text="Work Experience"
+          extraDelay={experienceDelay}
+          open={open}
+          borderControls={borderControls}
+          textControl={textControl}
+        />
+      </motion.div>
       {experiences.map((experience, idx) => (
         <motion.div
+          key={experience.company}
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
             delay: open ? experienceDelay + idx * 0.1 : 0,
             ease: "easeOut",
           }}
-          key={experience.company}
         >
           <Expertise experience={experience} />
         </motion.div>
       ))}
-      <Heading
-        text="Certifications"
-        extraDelay={certDelay}
-        open={open}
-        borderControls={borderControls}
-        textControl={textControl}
-      />
+      <motion.div animate={{ opacity: certifications.length ? 1 : 0.5 }}>
+        <Heading
+          text="Certifications"
+          extraDelay={certDelay}
+          open={open}
+          borderControls={borderControls}
+          textControl={textControl}
+        />
+      </motion.div>
       {certifications.map((certification, idx) => (
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
@@ -162,13 +201,15 @@ export default function MenuItems({ borderControls, textControl, open }) {
           <b className="ml-0.5">{certification.title}</b> {certification.from}
         </motion.div>
       ))}
-      <Heading
-        text="Popular Blog Posts"
-        extraDelay={blogDelay}
-        open={open}
-        borderControls={borderControls}
-        textControl={textControl}
-      />
+      <motion.div animate={{ opacity: blogs.length ? 1 : 0.5 }}>
+        <Heading
+          text="Popular Blog Posts"
+          extraDelay={blogDelay}
+          open={open}
+          borderControls={borderControls}
+          textControl={textControl}
+        />
+      </motion.div>
       {blogs.map((blog, idx) => (
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
@@ -185,75 +226,30 @@ export default function MenuItems({ borderControls, textControl, open }) {
           </a>
         </motion.div>
       ))}
-      <Heading
+      <Section
         text="Favourite Personal Projects"
-        extraDelay={projectsDelay}
         open={open}
+        items={projects}
+        delay={projectsDelay}
         borderControls={borderControls}
         textControl={textControl}
       />
-      {projects.map((blog, idx) => (
-        <motion.div
-          animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
-          transition={{
-            delay: open ? projectsDelay + idx * 0.1 : 0,
-            ease: "easeOut",
-          }}
-          key={idx}
-          className="my-3 max-w-3xl text-white font-ibm"
-        >
-          <a href={blog.url} target="_blank">
-            <b>{blog.title}</b>
-            <p className="text-gray-400">{blog.description}</p>
-          </a>
-        </motion.div>
-      ))}
-      <Heading
+      <Section
         text="Video Demos"
-        extraDelay={demoDelay}
         open={open}
+        items={demos}
+        delay={demoDelay}
         borderControls={borderControls}
         textControl={textControl}
       />
-      {demos.map((demo, idx) => (
-        <motion.div
-          animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
-          transition={{
-            delay: open ? demoDelay + idx * 0.1 : 0,
-            ease: "easeOut",
-          }}
-          key={idx}
-          className="my-3 max-w-3xl text-white font-ibm"
-        >
-          <a href={demo.url} target="_blank">
-            <b>{demo.title}</b>
-            <p className="text-gray-400">{demo.description}</p>
-          </a>
-        </motion.div>
-      ))}
-      <Heading
+      <Section
         text="Popular Courses"
-        extraDelay={teachingDelay}
         open={open}
+        items={teachings}
+        delay={teachingDelay}
         borderControls={borderControls}
         textControl={textControl}
       />
-      {teachings.map((course, idx) => (
-        <motion.div
-          animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
-          transition={{
-            delay: open ? teachingDelay + idx * 0.1 : 0,
-            ease: "easeOut",
-          }}
-          key={idx}
-          className="my-3 max-w-3xl text-white font-ibm"
-        >
-          <a href={course.url} target="_blank">
-            <b>{course.title}</b>
-            <p className="text-gray-400">{course.description}</p>
-          </a>
-        </motion.div>
-      ))}
     </div>
   );
 }

@@ -20,7 +20,32 @@ const SearchContextProvider = (props) => {
   const options = {
     includeScore: true,
     useExtendedSearch: true,
-    keys: ["title", "description", "achievements", "company", "from"],
+    includeMatches: true,
+    threshold: 0.3,
+    minMatchCharLength: 3,
+    ignoreLocation: true,
+    keys: [
+      {
+        name: "title",
+        weight: 0.3,
+      },
+      {
+        name: "description",
+        weight: 0.5,
+      },
+      {
+        name: "achievements",
+        weight: 0.5,
+      },
+      {
+        name: "company",
+        weight: 0.3,
+      },
+      {
+        name: "from",
+        weight: 0.3,
+      },
+    ],
   };
 
   const fuse = new Fuse(personalDetails, options);
@@ -29,7 +54,11 @@ const SearchContextProvider = (props) => {
     if (!searchTerm) {
       setResults({ ...ALL });
     } else {
-      const results = fuse.search(searchTerm).map((d) => d.item);
+      const results = fuse
+        .search(searchTerm)
+        .sort((a, b) => b.score - a.score)
+        .map((d) => ({ ...d.item, matches: d.matches }));
+
       setResults({
         experiences: results.filter((d) => d.type === "experience"),
         certifications: results.filter((d) => d.type === "certification"),
