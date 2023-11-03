@@ -41,13 +41,16 @@ export default function Question({ ask, question, setQuestion, thinking }) {
         />
       </div>
       <motion.div
-        animate={{ filter: thinking ? "grayscale(85%)" : "grayscale(0%)" }}
+        animate={{
+          filter:
+            thinking || !question.length ? "grayscale(85%)" : "grayscale(0%)",
+        }}
         transition={{ duration: 0.5 }}
       >
         <Gradient theme="primary" className="rounded-r">
           <button
             type="submit"
-            disabled={thinking}
+            disabled={thinking || !question.length}
             onClick={ask}
             className="flex-none border-l border-t border-white/20 bg-gradient-to-tl hover:to-white/5 hover:from-black/10 to-black/5 from-white/10 rounded-r px-12 py-4 text-sm text-white font-ibmCondensed"
           >
