@@ -43,7 +43,7 @@ function Section({ borderControls, textControl, delay, items, open, text }) {
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
-            delay: open ? delay + idx * 0.1 : 0,
+            delay: open ? delay + idx * 0.1 : 0.01,
             ease: "easeOut",
           }}
           key={idx}
@@ -112,7 +112,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
           key={idx}
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
-            delay: open ? 0.7 : 0,
+            delay: open ? 0.7 : 0.01,
             ease: "easeOut",
           }}
         >
@@ -126,7 +126,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
         animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
         className="max-w-3xl mt-4"
         transition={{
-          delay: open ? 0.8 : 0,
+          delay: open ? 0.8 : 0.01,
           ease: "easeOut",
         }}
       >
@@ -143,7 +143,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
         animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
         className="flex flex-wrap max-w-3xl my-8"
         transition={{
-          delay: open ? 0.9 : 0,
+          delay: open ? 0.9 : 0.01,
           ease: "easeOut",
         }}
       >
@@ -174,7 +174,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
           key={experience.company}
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
-            delay: open ? experienceDelay + idx * 0.1 : 0,
+            delay: open ? experienceDelay + idx * 0.1 : 0.01,
             ease: "easeOut",
           }}
         >
@@ -194,7 +194,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
-            delay: open ? certDelay + idx * 0.1 : 0,
+            delay: open ? certDelay + idx * 0.1 : 0.01,
             ease: "easeOut",
           }}
           key={certification.title}
@@ -219,7 +219,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
-            delay: open ? blogDelay + idx * 0.1 : 0,
+            delay: open ? blogDelay + idx * 0.1 : 0.01,
             ease: "easeOut",
           }}
           key={blog.title}
