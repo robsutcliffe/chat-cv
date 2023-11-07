@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { motion } from "framer-motion";
 import Expertise from "@components/MenuItems/Expertise";
+import TextHighlight from "@components/TextHighlight";
 import { SearchContext } from "@context/search.context";
 
 function Heading({ extraDelay, open, text, borderControls, textControl }) {
@@ -38,7 +39,7 @@ function Section({ borderControls, textControl, delay, items, open, text }) {
           textControl={textControl}
         />
       </motion.div>
-      {items.map((course, idx) => (
+      {items.map((item, idx) => (
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
@@ -48,9 +49,13 @@ function Section({ borderControls, textControl, delay, items, open, text }) {
           key={idx}
           className="my-3 max-w-3xl text-white font-ibm"
         >
-          <a href={course.url} target="_blank">
-            <b>{course.title}</b>
-            <p className="text-gray-400">{course.description}</p>
+          <a href={item.url} target="_blank">
+            <b>
+              <TextHighlight text={item.title} />
+            </b>
+            <p className="text-gray-400">
+              <TextHighlight text={item.description} />
+            </p>
           </a>
         </motion.div>
       ))}
@@ -82,9 +87,9 @@ export default function MenuItems({ borderControls, textControl, open }) {
 
   return (
     <motion.div
-      initial={{ x: "200%" }}
+      initial={{ x: "100%" }}
       animate={{ x: 0 }}
-      transition={{ delay: 0.3 }}
+      transition={{ delay: 1 }}
       className="flex-grow px-6 sm:px-12 overflow-y-auto min-h-0 pb-6 pt-60 sm:pt-48 overflow-hidden"
     >
       <motion.div
@@ -109,7 +114,9 @@ export default function MenuItems({ borderControls, textControl, open }) {
             ease: "easeOut",
           }}
         >
-          <p className="my-3 max-w-3xl text-white font-ibm">{a.description}</p>
+          <p className="my-3 max-w-3xl text-white font-ibm">
+            <TextHighlight text={a.description} />
+          </p>
         </motion.div>
       ))}
 
@@ -126,7 +133,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
             key={tag.title}
             className="inline-flex items-center rounded-md bg-gray-400/10 px-2 mr-1 mb-1 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20"
           >
-            {tag.title}
+            <TextHighlight text={tag.title} />
           </span>
         ))}
       </motion.div>
@@ -147,7 +154,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
             target="_blank"
             className="text-white border border-gray-600 mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
           >
-            {link.title}
+            <TextHighlight text={link.title} />
           </motion.a>
         ))}
       </motion.div>
@@ -191,8 +198,10 @@ export default function MenuItems({ borderControls, textControl, open }) {
           key={certification.title}
           className="my-3 max-w-3xl text-white font-ibm"
         >
-          <b className="ml-0.5">{certification.title}</b>{" "}
-          {certification.company}
+          <b className="ml-0.5">
+            <TextHighlight text={certification.title} />
+          </b>{" "}
+          <TextHighlight text={certification.company} />
         </motion.div>
       ))}
       <motion.div animate={{ opacity: blogs.length ? 1 : 0.5 }}>
@@ -215,8 +224,12 @@ export default function MenuItems({ borderControls, textControl, open }) {
           className="my-3 max-w-3xl text-white font-ibm"
         >
           <a href={blog.url} target="_blank">
-            <b>{blog.title}</b>
-            <p className="text-gray-400">{blog.description}</p>
+            <b>
+              <TextHighlight text={blog.title} />
+            </b>
+            <p className="text-gray-400">
+              <TextHighlight text={blog.description} />
+            </p>
           </a>
         </motion.div>
       ))}

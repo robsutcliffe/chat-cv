@@ -1,3 +1,4 @@
+import TextHighlight from "@components/TextHighlight";
 const formatDate = (dateObject) => {
   const date = new Date(dateObject);
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
@@ -19,7 +20,11 @@ export default function Expertise({ experience }) {
     <div className="my-3 max-w-3xl text-white font-ibm">
       <div className="justify-between flex">
         <h3 className="text-base">
-          {experience.company} <b className="ml-0.5"> {experience.title}</b>
+          <TextHighlight text={experience.company} />{" "}
+          <b className="ml-0.5">
+            {" "}
+            <TextHighlight text={experience.title} />
+          </b>
         </h3>
         <div className="text-sm text-gray-400">
           {start} <span className="text-gray-600">-</span> {end}
@@ -27,7 +32,9 @@ export default function Expertise({ experience }) {
       </div>
       <ul className="list-disc text-gray-400 ml-4 font-light">
         {experience.description.split("---").map((achivement) => (
-          <li key={achivement}>{achivement}</li>
+          <li key={achivement}>
+            <TextHighlight text={achivement} />
+          </li>
         ))}
       </ul>
     </div>

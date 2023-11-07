@@ -14,7 +14,7 @@ export async function searchSkills({ searchTerm }) {
         FROM cv
         WHERE similarity(title, ${searchTerm}) > 0.15
            OR similarity(description::text, ${searchTerm}) >
-              (0.001 + (1 - char_length(${searchTerm})::float / char_length(description)::float))
+              char_length(${searchTerm})::float / (char_length(description)::float*1.5)
            OR similarity(company, ${searchTerm}) > 0.2
       `;
   return rows;
