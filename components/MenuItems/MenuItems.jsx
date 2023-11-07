@@ -130,6 +130,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
       >
         {links.map((link) => (
           <motion.a
+            key={link.title}
             animate={borderControls}
             transition={{ duration: 10 }}
             href={link.url}
