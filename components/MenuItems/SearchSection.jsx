@@ -52,7 +52,7 @@ export default function SearchSection({ borderControls, textControl, open }) {
         >
           <Gradient
             theme="secondary"
-            className="bg-white p-1 my-4 max-w-md rounded-lg"
+            className="bg-white p-1 my-2 sm:my-4 max-w-md rounded-lg"
           >
             <input
               type="search"

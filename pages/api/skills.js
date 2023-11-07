@@ -16,16 +16,10 @@ const getType = (type, obj) =>
 export default async function handler(req, res) {
   const searchTerm = req.nextUrl.searchParams.get("searchTerm") ?? "";
 
-  console.log({ searchTerm });
-
-  //if (searchTerm) {
-  // posts = await searchPosts(page, searchTerm);
-  //} else {
   const skills = searchTerm
     ? await searchSkills({ searchTerm })
     : await getSkills();
-  //}
-  console.log(skills);
+
   const responseBody = JSON.stringify({
     experiences: getType("experience", skills),
     certifications: getType("certification", skills),
