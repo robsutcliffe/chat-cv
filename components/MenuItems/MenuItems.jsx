@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Expertise from "@components/MenuItems/Expertise";
-import cv from "@data/cv.json";
 import { SearchContext } from "@context/search.context";
 
 function Heading({ extraDelay, open, text, borderControls, textControl }) {
@@ -82,7 +81,12 @@ export default function MenuItems({ borderControls, textControl, open }) {
   const teachingDelay = demoDelay + videos.length * 0.1;
 
   return (
-    <div className="flex-grow px-12 overflow-y-auto min-h-0 pb-6 pt-48 overflow-hidden">
+    <motion.div
+      initial={{ x: "200%" }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0.3 }}
+      className="flex-grow px-6 sm:px-12 overflow-y-auto min-h-0 pb-6 pt-60 sm:pt-48 overflow-hidden"
+    >
       <motion.div
         animate={{
           opacity: about.length + tags.length + links.length > 0 ? 1 : 0.5,
@@ -128,7 +132,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
       </motion.div>
       <motion.div
         animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
-        className="max-w-3xl my-8"
+        className="flex flex-wrap max-w-3xl my-8"
         transition={{
           delay: open ? 0.9 : 0,
           ease: "easeOut",
@@ -240,6 +244,6 @@ export default function MenuItems({ borderControls, textControl, open }) {
         borderControls={borderControls}
         textControl={textControl}
       />
-    </div>
+    </motion.div>
   );
 }

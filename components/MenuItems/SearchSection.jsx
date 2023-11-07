@@ -25,12 +25,12 @@ export default function SearchSection({ borderControls, textControl, open }) {
       <motion.div
         animate={borderControls}
         transition={{ duration: 10 }}
-        className="px-12 pt-6 border-t border-black"
+        className="px-6 sm:px-12 pt-6 border-t border-black"
       >
         <motion.div
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{ delay: open ? 0.3 : 0, ease: "easeOut" }}
-          className="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl"
+          className="text-2xl font-bold tracking-tight text-gray-100 sm:text-3xl md:text-4xl mt-8 sm:mt-0"
         >
           OK, We can do it the old-fashioned way...
         </motion.div>

@@ -6,6 +6,7 @@ import SearchSection from "@components/MenuItems/SearchSection";
 import MenuItems from "@components/MenuItems/MenuItems";
 
 export default function Menu() {
+  const [leftValue, setLeftValue] = useState("144px");
   const { secondaryColours, circleColours } = useContext(ColourContext);
   const textControl = useAnimation();
   const backgroundControls = useAnimation();
@@ -20,6 +21,24 @@ export default function Menu() {
     borderControls.start({ borderColor: color });
   }, [secondaryColours, textControl, backgroundControls]);
 
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 1024) {
+        setLeftValue("144px");
+      } else if (window.innerWidth >= 768) {
+        setLeftValue("112px");
+      } else if (window.innerWidth < 768 && window.innerWidth >= 640) {
+        setLeftValue("92px");
+      } else {
+        setLeftValue("0px");
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -33,7 +52,7 @@ export default function Menu() {
       }}
       variants={{
         open: {
-          left: "144px",
+          left: leftValue,
           width: "auto",
           backgroundColor: "rgba(0, 0, 0, 1)",
         },
