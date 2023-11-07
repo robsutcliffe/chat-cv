@@ -36,15 +36,15 @@ function Question({ question }) {
             repeatType: "loop",
             times: [0, 0.1, 0.3, 0.9, 0.95, 1],
           }}
-          className="absolute blur-xl w-12 opacity-75 h-12 rounded-full bg-black"
+          className="absolute blur-xl w-12 opacity-50 h-12 rounded-full bg-white"
         />
         <div
           className="text-white relative z-10 font-ibmCondensed rounded"
           style={{ backgroundColor: "rgba(6, 30, 42,1)" }}
         >
-          <div className="p-2 md:p-4 lg:p-6 bg-gradient-to-tl text-sm md:text-base hover:to-white/5 hover:from-black/50 to-black/5 from-white/1 flex gap-2 justify-center align-middle">
+          <div className="p-2 md:p-4 lg:p-6 bg-gradient-to-tl text-sm md:text-base hover:to-white/5 hover:from-black/30 to-black/5 from-white/1 flex gap-2 transition ease-in-out duration-500 justify-center align-middle">
             {question.text}{" "}
-            <div className="border border-white/30 h-6 w-6 p-0.5 rounded-full flex justify-center align-middle text-2xs md:text-xs">
+            <div className="border border-white/20 h-6 w-6 p-0.5 rounded-full flex justify-center align-middle text-2xs md:text-xs">
               &#63;
             </div>
           </div>

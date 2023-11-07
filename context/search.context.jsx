@@ -21,13 +21,9 @@ const SearchContextProvider = (props) => {
     const searchRequest = axios.CancelToken.source();
     axios(`/api/skills?searchTerm=${searchTerm}`, {
       cancelToken: searchRequest.token,
-    })
-      .then((response) => {
-        setResults(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    }).then((response) => {
+      setResults(response.data);
+    });
     return () => {
       searchRequest.cancel();
     };
