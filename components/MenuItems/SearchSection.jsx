@@ -61,7 +61,7 @@ export default function SearchSection({ borderControls, textControl, open }) {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               required
-              className="bg-black px-4 w-full rounded-md py-3 border-none text-base text-white outline-none shadow-sm placeholder:text-gray-500 sm:text-sm sm:leading-6"
+              className="bg-black px-4 w-full rounded-md py-2 md:py-3 border-none text-base text-white outline-none shadow-sm placeholder:text-gray-500 sm:text-sm sm:leading-6"
               placeholder="Search Term"
             />
           </Gradient>
