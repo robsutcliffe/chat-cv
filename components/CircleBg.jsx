@@ -28,14 +28,6 @@ function CircleBg({ sizes, ...props }) {
     }
   }, [updating]);
 
-  useEffect(() => {
-    if (sizes.height) {
-      p5?.resizeCanvas(sizes.width, sizes.height);
-      setColCount(Math.round(sizes.width / radius));
-      addCircles();
-    }
-  }, [sizes]);
-
   function windowResized() {
     p5?.resizeCanvas(sizes.width, sizes.height);
     setColCount(Math.round(sizes.width / radius));
@@ -43,7 +35,7 @@ function CircleBg({ sizes, ...props }) {
   }
 
   useEffect(() => {
-    if (!circleColours.length && p5) {
+    if (p5) {
       updateColours();
     }
   }, [p5]);
@@ -91,6 +83,7 @@ function CircleBg({ sizes, ...props }) {
 
   const setup = (p5, canvasParentRef) => {
     setP5(p5);
+    console.log("setup");
     p5?.createCanvas(sizes.width, sizes.height).parent(canvasParentRef);
     p5?.noStroke();
   };

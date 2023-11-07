@@ -90,7 +90,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
       initial={{ x: "100%" }}
       animate={{ x: 0 }}
       transition={{ delay: 1 }}
-      className={`flex-grow px-6 sm:px-12 overflow-y-auto min-h-0 pb-6 pt-60 sm:pt-48 overflow-hidden ${
+      className={`flex-grow px-6 sm:px-12 overflow-y-auto min-h-0 pb-6 pt-52 sm:pt-56 md:pt-44 overflow-hidden ${
         open ? "scrollbar scrollbar-thumb-gray-600 scrollbar-track-black" : ""
       }`}
     >

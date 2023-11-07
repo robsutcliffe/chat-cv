@@ -1,4 +1,3 @@
-import useTaperedEdges from "@components/useTaperedEdges";
 import Gradient from "@components/Gradient";
 import { motion } from "framer-motion";
 
@@ -21,7 +20,7 @@ function Question({ question }) {
             repeatType: "loop",
             times: [0, 0.6, 0.65, 0.7, 0.8, 1],
           }}
-          className="absolute blur-xl w-12 h-12 rounded-full bg-white"
+          className="absolute blur-xl w-12 opacity-75 h-12 rounded-full bg-white"
         />
         <motion.div
           animate={{
@@ -42,7 +41,7 @@ function Question({ question }) {
           className="text-white relative z-10 font-ibmCondensed rounded"
           style={{ backgroundColor: "rgba(6, 30, 42,1)" }}
         >
-          <div className="p-2 md:p-4 lg:p-6 bg-gradient-to-tl text-sm md:text-base hover:to-white/5 hover:from-black/30 to-black/5 from-white/1 flex gap-2 transition ease-in-out duration-500 justify-center align-middle">
+          <div className="p-2 md:p-4 lg:p-6 shadow-inner bg-gradient-to-tl text-sm md:text-base hover:to-white/5 hover:from-black/30 to-black/5 from-white/1 flex gap-2 transition ease-in-out duration-500 justify-center align-middle">
             {question.text}{" "}
             <div className="border border-white/20 h-6 w-6 p-0.5 rounded-full flex justify-center align-middle text-2xs md:text-xs">
               &#63;

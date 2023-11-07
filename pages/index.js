@@ -38,8 +38,7 @@ const HomePage = () => {
   return (
     <Layout home="true">
       <div
-        className="w-full min-h-full bg-white overflow-hidden relative"
-        style={{ backgroundColor: "#061E2A" }}
+        className="w-full min-h-full overflow-hidden relative bg-ff-navy"
         ref={wrapperRef}
       >
         {sizes.height && <CircleBg sizes={sizes} />}
