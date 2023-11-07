@@ -8,7 +8,7 @@ function Question({ question }) {
       onClick={question.onClick}
       className="shadow-2xl grow overflow-hidden rounded relative"
     >
-      <Gradient style={{ padding: 3 }} theme="circle">
+      <Gradient style={{ padding: 2 }} theme="circle">
         <motion.div
           animate={{
             left: ["-5%", "200%", "200%", "200%", "-40%", "-5%"],
