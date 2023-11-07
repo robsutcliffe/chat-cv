@@ -62,8 +62,6 @@ function Section({ borderControls, textControl, delay, items, open, text }) {
 export default function MenuItems({ borderControls, textControl, open }) {
   const { results } = useContext(SearchContext);
 
-  const summary = cv.About["personal summary"];
-
   const {
     tags,
     experiences,
@@ -92,8 +90,9 @@ export default function MenuItems({ borderControls, textControl, open }) {
         borderControls={borderControls}
         textControl={textControl}
       />
-      {about.map((a) => (
+      {about.map((a, idx) => (
         <motion.div
+          key={idx}
           animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
           transition={{
             delay: open ? 0.7 : 0,
