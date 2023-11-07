@@ -3,7 +3,9 @@ import { SearchContext } from "@context/search.context";
 
 export default function TextHighlight({ text }) {
   const { searchTerm } = useContext(SearchContext);
-  const regex = new RegExp(searchTerm, "gi");
+  const terms = searchTerm.split(/[\s\p{P}]+/u);
+  const regexPattern = terms.join("|");
+  const regex = new RegExp(regexPattern, "gi");
 
   return (
     <span

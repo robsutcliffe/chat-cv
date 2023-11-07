@@ -7,7 +7,7 @@ export default function SearchSection({ borderControls, textControl, open }) {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
   return (
     <motion.div
-      className="overflow-x-clip absolute bg-black w-full bg-opacity-90 z-40"
+      className="overflow-x-clip absolute bg-black left-0 right-4 bg-opacity-90 z-40"
       initial={{ x: "100%", opacity: 0 }}
       variants={{
         closed: {
