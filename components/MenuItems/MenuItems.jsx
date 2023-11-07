@@ -49,11 +49,11 @@ function Section({ borderControls, textControl, delay, items, open, text }) {
           key={idx}
           className="my-3 max-w-3xl text-white font-ibm"
         >
-          <a href={item.url} target="_blank">
+          <a className="group" href={item.url} target="_blank">
             <b>
               <TextHighlight text={item.title} />
             </b>
-            <p className="text-gray-400">
+            <p className="text-gray-400 group-hover:text-gray-200">
               <TextHighlight text={item.description} />
             </p>
           </a>
@@ -154,7 +154,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
             transition={{ duration: 10 }}
             href={link.url}
             target="_blank"
-            className="text-white border border-gray-600 mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
+            className="text-gray-200 hover:text-white border border-gray-600 mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
           >
             <TextHighlight text={link.title} />
           </motion.a>
@@ -225,11 +225,11 @@ export default function MenuItems({ borderControls, textControl, open }) {
           key={blog.title}
           className="my-3 max-w-3xl text-white font-ibm"
         >
-          <a href={blog.url} target="_blank">
+          <a href={blog.url} className="group" target="_blank">
             <b>
               <TextHighlight text={blog.title} />
             </b>
-            <p className="text-gray-400">
+            <p className="text-gray-400  group-hover:text-gray-200">
               <TextHighlight text={blog.description} />
             </p>
           </a>
