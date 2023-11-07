@@ -82,14 +82,20 @@ export default function MenuItems({ borderControls, textControl, open }) {
   const teachingDelay = demoDelay + videos.length * 0.1;
 
   return (
-    <div className="flex-grow px-12 overflow-y-auto min-h-0 pb-6 pt-48">
-      <Heading
-        text="About Me"
-        extraDelay={0.6}
-        open={open}
-        borderControls={borderControls}
-        textControl={textControl}
-      />
+    <div className="flex-grow px-12 overflow-y-auto min-h-0 pb-6 pt-48 overflow-hidden">
+      <motion.div
+        animate={{
+          opacity: about.length + tags.length + links.length > 0 ? 1 : 0.5,
+        }}
+      >
+        <Heading
+          text="About Me"
+          extraDelay={0.6}
+          open={open}
+          borderControls={borderControls}
+          textControl={textControl}
+        />
+      </motion.div>
       {about.map((a, idx) => (
         <motion.div
           key={idx}
