@@ -42,7 +42,7 @@ function Question({ question }) {
           className="text-white relative z-10 font-ibmCondensed rounded"
           style={{ backgroundColor: "rgba(6, 30, 42,1)" }}
         >
-          <div className="p-2 md:p-4 lg:p-6 bg-gradient-to-tl text-sm md:text-base hover:to-white/1 hover:from-black/30 to-black/5 from-white/1 flex gap-2 justify-center align-middle">
+          <div className="p-2 md:p-4 lg:p-6 bg-gradient-to-tl text-sm md:text-base hover:to-white/5 hover:from-black/50 to-black/5 from-white/1 flex gap-2 justify-center align-middle">
             {question.text}{" "}
             <div className="border border-white/30 h-6 w-6 p-0.5 rounded-full flex justify-center align-middle text-2xs md:text-xs">
               &#63;
