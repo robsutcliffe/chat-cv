@@ -63,20 +63,25 @@ export default function MenuItems({ borderControls, textControl, open }) {
   const { results } = useContext(SearchContext);
 
   const summary = cv.About["personal summary"];
-  const skills = Object.values(cv["Techinical Skills"]).flat();
-  const experiences = results.experiences;
-  const certifications = results.certifications;
-  const blogs = results.blogs;
-  const projects = results.projects;
-  const demos = results.videos;
-  const teachings = results.courses;
+
+  const {
+    tags,
+    experiences,
+    certifications,
+    blogs,
+    projects,
+    videos,
+    courses,
+    links,
+    about,
+  } = results;
 
   const experienceDelay = 1;
   const certDelay = experienceDelay + experiences.length * 0.1;
   const blogDelay = certDelay + certifications.length * 0.1;
   const projectsDelay = blogDelay + blogs.length * 0.1;
   const demoDelay = projectsDelay + projects.length * 0.1;
-  const teachingDelay = demoDelay + demos.length * 0.1;
+  const teachingDelay = demoDelay + videos.length * 0.1;
 
   return (
     <div className="flex-grow px-12 overflow-y-auto min-h-0 pb-6 pt-48">
@@ -87,15 +92,18 @@ export default function MenuItems({ borderControls, textControl, open }) {
         borderControls={borderControls}
         textControl={textControl}
       />
-      <motion.div
-        animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
-        transition={{
-          delay: open ? 0.7 : 0,
-          ease: "easeOut",
-        }}
-      >
-        <p className="my-3 max-w-3xl text-white font-ibm">{summary}</p>
-      </motion.div>
+      {about.map((a) => (
+        <motion.div
+          animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
+          transition={{
+            delay: open ? 0.7 : 0,
+            ease: "easeOut",
+          }}
+        >
+          <p className="my-3 max-w-3xl text-white font-ibm">{a.description}</p>
+        </motion.div>
+      ))}
+
       <motion.div
         animate={{ y: open ? 0 : 100, opacity: open ? 1 : 0 }}
         className="max-w-3xl mt-4"
@@ -104,12 +112,12 @@ export default function MenuItems({ borderControls, textControl, open }) {
           ease: "easeOut",
         }}
       >
-        {skills.map((skill) => (
+        {tags.map((tag) => (
           <span
-            key={skill}
+            key={tag.title}
             className="inline-flex items-center rounded-md bg-gray-400/10 px-2 mr-1 mb-1 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20"
           >
-            {skill}
+            {tag.title}
           </span>
         ))}
       </motion.div>
@@ -121,42 +129,17 @@ export default function MenuItems({ borderControls, textControl, open }) {
           ease: "easeOut",
         }}
       >
-        <motion.a
-          animate={borderControls}
-          transition={{ duration: 10 }}
-          href="https://twitter.com/firefields"
-          target="_blank"
-          className="text-white border border-white mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
-        >
-          Twitter
-        </motion.a>
-        <motion.a
-          animate={borderControls}
-          transition={{ duration: 10 }}
-          href="https://observablehq.com/@robsutcliffe?tab=notebooks"
-          target="_blank"
-          className="text-white border border-white mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
-        >
-          Observable
-        </motion.a>
-        <motion.a
-          animate={borderControls}
-          transition={{ duration: 10 }}
-          href="https://github.com/robsutcliffe"
-          target="_blank"
-          className="text-white border border-white mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
-        >
-          Github
-        </motion.a>
-        <motion.a
-          animate={borderControls}
-          transition={{ duration: 10 }}
-          href="mailto:rob@firefields.com"
-          target="_blank"
-          className="text-white border border-white mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
-        >
-          Email
-        </motion.a>
+        {links.map((link) => (
+          <motion.a
+            animate={borderControls}
+            transition={{ duration: 10 }}
+            href={link.url}
+            target="_blank"
+            className="text-white border border-gray-600 mr-4 mb-4 font-bold rounded-lg px-4 py-2 font-ibmCondensed cursor-pointer"
+          >
+            {link.title}
+          </motion.a>
+        ))}
       </motion.div>
       <motion.div animate={{ opacity: experiences.length ? 1 : 0.5 }}>
         <Heading
@@ -198,7 +181,8 @@ export default function MenuItems({ borderControls, textControl, open }) {
           key={certification.title}
           className="my-3 max-w-3xl text-white font-ibm"
         >
-          <b className="ml-0.5">{certification.title}</b> {certification.from}
+          <b className="ml-0.5">{certification.title}</b>{" "}
+          {certification.company}
         </motion.div>
       ))}
       <motion.div animate={{ opacity: blogs.length ? 1 : 0.5 }}>
@@ -237,7 +221,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
       <Section
         text="Video Demos"
         open={open}
-        items={demos}
+        items={videos}
         delay={demoDelay}
         borderControls={borderControls}
         textControl={textControl}
@@ -245,7 +229,7 @@ export default function MenuItems({ borderControls, textControl, open }) {
       <Section
         text="Popular Courses"
         open={open}
-        items={teachings}
+        items={courses}
         delay={teachingDelay}
         borderControls={borderControls}
         textControl={textControl}

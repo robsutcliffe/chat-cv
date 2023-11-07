@@ -1,21 +1,23 @@
 import { createContext, useState, useEffect } from "react";
 import personalDetails from "@data/personalDetails.json";
+import axios from "axios";
 import Fuse from "fuse.js";
 
 const SearchContext = createContext();
 
-const ALL = {
-  experiences: personalDetails.filter((d) => d.type === "experience"),
-  certifications: personalDetails.filter((d) => d.type === "certification"),
-  blogs: personalDetails.filter((d) => d.type === "blog"),
-  projects: personalDetails.filter((d) => d.type === "project"),
-  videos: personalDetails.filter((d) => d.type === "video"),
-  courses: personalDetails.filter((d) => d.type === "course"),
-};
-
 const SearchContextProvider = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [results, setResults] = useState({ ...ALL });
+  const [results, setResults] = useState({
+    experiences: [],
+    certifications: [],
+    blogs: [],
+    projects: [],
+    videos: [],
+    courses: [],
+    tags: [],
+    links: [],
+    about: [],
+  });
 
   const options = {
     includeScore: true,
@@ -51,23 +53,19 @@ const SearchContextProvider = (props) => {
   const fuse = new Fuse(personalDetails, options);
 
   useEffect(() => {
-    if (!searchTerm) {
-      setResults({ ...ALL });
-    } else {
-      const results = fuse
-        .search(searchTerm)
-        .sort((a, b) => b.score - a.score)
-        .map((d) => ({ ...d.item, matches: d.matches }));
-
-      setResults({
-        experiences: results.filter((d) => d.type === "experience"),
-        certifications: results.filter((d) => d.type === "certification"),
-        blogs: results.filter((d) => d.type === "blog"),
-        projects: results.filter((d) => d.type === "project"),
-        videos: results.filter((d) => d.type === "video"),
-        courses: results.filter((d) => d.type === "course"),
+    const searchRequest = axios.CancelToken.source();
+    axios(`/api/skills?searchTerm=${searchTerm}`, {
+      cancelToken: searchRequest.token,
+    })
+      .then((response) => {
+        setResults(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    }
+    return () => {
+      searchRequest.cancel();
+    };
   }, [searchTerm]);
 
   const value = {

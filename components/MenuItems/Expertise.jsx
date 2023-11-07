@@ -1,5 +1,7 @@
-const formatDate = (date) => {
-  const [, month, year] = date.split("/");
+const formatDate = (dateObject) => {
+  const date = new Date(dateObject);
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const year = date.getFullYear().toString().substr(2);
   return (
     <>
       <span className="text-gray-400">{month}</span>
@@ -24,7 +26,7 @@ export default function Expertise({ experience }) {
         </div>
       </div>
       <ul className="list-disc text-gray-400 ml-4 font-light">
-        {experience.achievements.map((achivement) => (
+        {experience.description.split("---").map((achivement) => (
           <li key={achivement}>{achivement}</li>
         ))}
       </ul>
